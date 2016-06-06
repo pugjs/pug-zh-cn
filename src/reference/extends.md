@@ -33,6 +33,6 @@ block content
 </html>
 ```
 
-::: card info Note
+::: float note
 You can have multiple levels of inheritance, allowing you to create powerful hierarchies of templates.
 :::

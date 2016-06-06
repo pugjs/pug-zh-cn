@@ -52,7 +52,7 @@ div(escaped="<code>")
 div(unescaped!="<code>")
 ```
 
-::: card danger Danger
+::: float danger
 Unescaped buffered code can be dangerous. You must be sure to sanitize any user inputs to avoid [cross-site scripting].
 :::
 
@@ -147,7 +147,7 @@ The object does not have to be an object literal. It can also just be a variable
 div#foo(data-bar="foo")&attributes(attributes)
 ```
 
-::: card danger Danger
+::: float danger
 Attributes applied using `&attributes` are not automatically escaped. You must be sure to sanitize any user inputs to avoid [cross-site scripting] (XSS). This is done for you if you are passing in `attributes` from a mixin call.
 :::
 
