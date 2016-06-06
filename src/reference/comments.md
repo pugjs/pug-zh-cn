@@ -2,7 +2,7 @@
 
 Single line comments look the same as JavaScript comments and must be placed on their own line:
 
-```pug-demo
+```pug-preview
 // just some paragraphs
 p foo
 p bar
@@ -10,7 +10,7 @@ p bar
 
 Pug also supports unbuffered comments, by simply adding a hyphen
 
-```pug-demo
+```pug-preview
 //- will not output within markup
 p foo
 p bar
@@ -20,7 +20,7 @@ p bar
 
 A block comment is legal as well:
 
-```pug-demo
+```pug-preview
 body
   //
     As much text as you want
@@ -31,7 +31,7 @@ body
 
 Pug does not have any special syntax for conditional comments. But since all lines beginning with `<` are treated as plain text, normal HTML style conditional comments will do fine.
 
-```pug-demo
+```pug-preview
 <!--[if IE 8]>
 <html lang="en" class="lt-ie9">
 <![endif]-->

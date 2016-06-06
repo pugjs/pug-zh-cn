@@ -1,6 +1,6 @@
 # Doctype
 
-```pug-demo
+```pug-preview
 doctype html
 ```
 
@@ -15,7 +15,7 @@ There are shortcuts for commonly used doctypes:
 
 You can also use your own literal custom doctype:
 
-```pug-demo
+```pug-preview
 doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
 ```
 

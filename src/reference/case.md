@@ -2,7 +2,7 @@
 
 The case statement is a shorthand for JavaScript's `switch` statement and takes the following form:
 
-```pug-demo
+```pug-preview
 - var friends = 10
 case friends
   when 0
@@ -17,7 +17,7 @@ case friends
 
 You can use fall through just like in a `switch` statement in JavaScript.
 
-```pug-demo
+```pug-preview
 - var friends = 0
 case friends
   when 0
@@ -31,7 +31,7 @@ case friends
 
 Block expansion may also be used:
 
-```pug-demo
+```pug-preview
 - var friends = 1
 case friends
   when 0: p you have no friends

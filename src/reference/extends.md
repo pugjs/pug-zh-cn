@@ -2,8 +2,9 @@
 
 The `extends` keyword allows a template to extend a layout or parent template. It can then override certain pre-defined blocks of content.
 
-```pug-demo-static
-\\\\\\\\\\layout.pug
+```pug-preview-advanced readonly fs
+\\\\\\\\\\ layout.pug <
+//- layout.pug
 doctype html
 html
   head
@@ -11,7 +12,8 @@ html
       title Default title
   body
     block content
-\\\\\\\\\\index.pug
+\\\\\\\\\\ index.pug <
+//- index.pug
 extends ./layout.pug
 
 block title
@@ -19,7 +21,7 @@ block title
 
 block content
   h1 My Article
-\\\\\\\\\\output.html
+\\\\\\\\\\ output.html >
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,6 +33,6 @@ block content
 </html>
 ```
 
-:::panel info Note
+::: card info Note
 You can have multiple levels of inheritance, allowing you to create powerful hierarchies of templates.
 :::

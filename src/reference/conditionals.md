@@ -2,7 +2,7 @@
 
 Pug's first-class conditional syntax allows for optional parenthesis, and you may now omit the leading `-` otherwise it's identical, still just regular javascript:
 
-```pug-demo
+```pug-preview
 - var user = { description: 'foo bar baz' }
 - var authorised = false
 #user
@@ -21,10 +21,11 @@ Pug's first-class conditional syntax allows for optional parenthesis, and you ma
 
 Pug also provides a negated version `unless` (the following are therefore equivalent):
 
-```pug-demo
+```pug-preview-advanced readonly
+\\\\\\\\\\ a.pug <
 unless user.isAnonymous
   p You're logged in as #{user.name}
-
+\\\\\\\\\\ b.pug >
 if !user.isAnonymous
   p You're logged in as #{user.name}
 ```
