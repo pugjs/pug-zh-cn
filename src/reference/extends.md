@@ -2,8 +2,17 @@
 
 The `extends` keyword allows a template to extend a layout or parent template. It can then override certain pre-defined blocks of content.
 
-```pug-preview-advanced readonly fs
-\\\\\\\\\\ layout.pug <
+```pug-preview demo=extends
+\\\\\\\\\\ index.pug
+//- index.pug
+extends layout.pug
+
+block title
+  title Article Title
+
+block content
+  h1 My Article
+\\\\\\\\\\ layout.pug
 //- layout.pug
 doctype html
 html
@@ -12,25 +21,6 @@ html
       title Default title
   body
     block content
-\\\\\\\\\\ index.pug <
-//- index.pug
-extends ./layout.pug
-
-block title
-  title Article Title
-
-block content
-  h1 My Article
-\\\\\\\\\\ output.html >
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Article Title</title>
-  </head>
-  <body>
-    <h1>My Article</h1>
-  </body>
-</html>
 ```
 
 ::: float note

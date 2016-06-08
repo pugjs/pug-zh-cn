@@ -21,7 +21,7 @@ Pug's first-class conditional syntax allows for optional parenthesis, and you ma
 
 Pug also provides a negated version `unless` (the following are therefore equivalent):
 
-```pug-preview-advanced readonly
+```pug-preview-readonly
 \\\\\\\\\\ a.pug <
 unless user.isAnonymous
   p You're logged in as #{user.name}

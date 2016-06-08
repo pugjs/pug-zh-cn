@@ -19,37 +19,37 @@ All API methods take the following set of options:
 ```parameter-list
 filename:
 ~ string
-~ Used in exceptions, and required for relative includes and extends
+~ The name of the file being compiled. Used in exceptions, and required for relative includes and extends. Defaults to `'Pug'`.
 basedir:
 ~ string
-~ The base directory of all absolute inclusion
+~ The root directory of all absolute inclusion.
 doctype:
 ~ string
-~ If the doctype is not specified as part of the template, you can specify it here.  It is sometimes useful to get self-closing tags and remove mirroring of boolean attributes.
+~ If the doctype is not specified as part of the template, you can specify it here. It is sometimes useful to get self-closing tags and remove mirroring of boolean attributes; see [doctype documentation](reference/doctype.html#doctype-option) for more information.
 pretty:
 ~ boolean | string
-~ Adds whitespace to the resulting HTML to make it easier for a human to read using <code>'&nbsp;&nbsp;'</code> as indentation. If a string is specified, that will be used as indentation instead (e.g. `'\t'`).
+~ Adds whitespace to the resulting HTML to make it easier for a human to read using <code>'&nbsp;&nbsp;'</code> as indentation. If a string is specified, that will be used as indentation instead (e.g. `'\t'`). Defaults to `false`.
 self:
 ~ boolean
-~ Use a `self` namespace to hold the locals (false by default)
+~ Use a `self` namespace to hold the locals. It will speed up the compilation, but instead of writing `variable` you will have to write `self.variable` to access a property of the locals object. Defaults to `false`.
 debug:
 ~ boolean
-~ If set to true, the tokens and function body is logged to stdout
+~ If set to true, the tokens and function body are logged to stdout.
 compileDebug:
 ~ boolean
 ~ If set to true, the function source will be included in the compiled template for better error messages (sometimes useful in development). It is enabled by default unless used with express in production mode.
 globals:
 ~ Array.<string>
-~ Add a list of global names to make accessible in templates
+~ Add a list of global names to make accessible in templates.
 cache:
 ~ boolean
-~ If set to true, compiled functions are cached. `filename` must be set as the cache key. Only applies to `render*`.
+~ If set to true, compiled functions are cached. `filename` must be set as the cache key. Only applies to `render*`. Defaults to `false`.
 inlineRuntimeFunctions:
 ~ boolean
 ~ Inline runtime functions instead of `require`-ing them from a shared version. For client-side compilation, the default is true so that one does not have to include the runtime. For all other compilation or rendering types, the default is false.
 name:
 ~ string
-~ The name of the template function. Only applies to `compile*Client*`.
+~ The name of the template function. Only applies to `compile*Client*`. Defaults to `'template'`.
 ```
 
 ### pug.compile(source[, options])

@@ -141,9 +141,11 @@ Pronounced as "and attributes", the `&attributes` syntax can be used to explode 
 div#foo(data-bar="foo")&attributes({'data-foo': 'bar'})
 ```
 
-The object does not have to be an object literal. It can also just be a variable that has an object as its value (see also [Mixin Attributes].
+The object does not have to be an object literal. It can also just be a variable that has an object as its value (see also [Mixin Attributes]).
 
 ```pug-preview
+- var attributes = {};
+- attributes.class = 'baz';
 div#foo(data-bar="foo")&attributes(attributes)
 ```
 
