@@ -25,7 +25,7 @@ basedir:
 ~ The root directory of all absolute inclusion.
 doctype:
 ~ string
-~ If the doctype is not specified as part of the template, you can specify it here. It is sometimes useful to get self-closing tags and remove mirroring of boolean attributes; see [doctype documentation](reference/doctype.html#doctype-option) for more information.
+~ If the doctype is not specified as part of the template, you can specify it here. It is sometimes useful to get self-closing tags and remove mirroring of boolean attributes; see [doctype documentation](language/doctype.html#doctype-option) for more information.
 pretty:
 ~ boolean | string
 ~ Adds whitespace to the resulting HTML to make it easier for a human to read using <code>'&nbsp;&nbsp;'</code> as indentation. If a string is specified, that will be used as indentation instead (e.g. `'\t'`). Defaults to `false`.

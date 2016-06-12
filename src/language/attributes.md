@@ -27,14 +27,14 @@ input(
 
 If you have a very long attribute or need text interpolation, and your JavaScript runtime supports ES2015 template strings (including Node.js/io.js 1.0.0 and later), you can also utilize that syntax:
 
-```pug-preview templatestrings
+```pug-preview (es2015=['templatestrings'])
 - var btnType = 'info'
 - var btnSize = 'lg'
 button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize)
 button(type='button' class=`btn btn-${btnType} btn-${btnSize}`)
 ```
 
-```pug-preview templatestrings
+```pug-preview (es2015=['templatestrings'])
 input(data-json=`
   {
     "very-long": "piece of ",

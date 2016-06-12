@@ -15,7 +15,7 @@ $ npm install --save jstransformer-markdown-it
 
 Now, you should be able to render the following template:
 
-```pug-preview server-only
+```pug-preview (serverOnly)
 :markdown-it(linkify langPrefix='highlight-')
   # Markdown
 
@@ -52,7 +52,7 @@ Multiple filters can be applied to the same block of text by specifying them on 
 
 In the following example, the script is first transformed by `babel`, and then by `cdata-js`.
 
-```pug-preview server-only
+```pug-preview (serverOnly)
 script
   :cdata-js:babel(preset=['es2015'])
     const myFunc = () => `This is ES2015 in a CD${'ATA'}`;
