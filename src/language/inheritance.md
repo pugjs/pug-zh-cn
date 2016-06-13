@@ -1,6 +1,7 @@
 ---
 title: Template Inheritance
 template: language
+id: language/inheritance
 ---
 
 # Template Inheritance

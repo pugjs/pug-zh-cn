@@ -1,1 +1,21 @@
-{}
+{
+  "nav": {
+    "api": "API",
+    "language": "Language Reference",
+    "language/attributes": "Attributes",
+    "language/case": "Case",
+    "language/code": "Code",
+    "language/comments": "Comments",
+    "language/conditionals": "Conditionals",
+    "language/doctype": "Doctype",
+    "language/extends": "Extends",
+    "language/filters": "Filters",
+    "language/includes": "Includes",
+    "language/inheritance": "Inheritance",
+    "language/interpolation": "Interpolation",
+    "language/iteration": "Iteration",
+    "language/mixins": "Mixins",
+    "language/plain-text": "Plain Text",
+    "language/tags": "Tags"
+  }
+}

@@ -1,6 +1,7 @@
 ---
 title: Code
 template: language
+id: language/code
 ---
 
 # Code

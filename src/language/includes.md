@@ -1,6 +1,7 @@
 ---
 title: Includes
 template: language
+id: language/includes
 ---
 
 # Includes

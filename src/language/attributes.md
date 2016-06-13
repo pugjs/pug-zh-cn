@@ -1,6 +1,7 @@
 ---
 title: Attributes
 template: language
+id: language/attributes
 ---
 
 # Attributes

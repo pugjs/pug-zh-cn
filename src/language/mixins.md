@@ -1,6 +1,7 @@
 ---
 title: Mixins
 template: language
+id: language/mixins
 ---
 
 # Mixins

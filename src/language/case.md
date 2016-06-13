@@ -1,6 +1,7 @@
 ---
 title: Case
 template: language
+id: language/case
 ---
 
 # Case

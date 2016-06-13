@@ -1,6 +1,7 @@
 ---
 title: Comments
 template: language
+id: language/comments
 ---
 
 # Comments

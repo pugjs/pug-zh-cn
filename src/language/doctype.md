@@ -1,6 +1,7 @@
 ---
 title: Doctype
 template: language
+id: language/doctype
 ---
 
 # Doctype

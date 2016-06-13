@@ -1,6 +1,7 @@
 ---
 title: Conditionals
 template: language
+id: language/conditionals
 ---
 
 # Conditionals

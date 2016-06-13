@@ -1,6 +1,7 @@
 ---
 title: Filters
 template: language
+id: language/filters
 ---
 
 # Filters

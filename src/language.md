@@ -1,6 +1,7 @@
 ---
 title: Language Reference
 template: generic
+id: language
 ---
 
 # Language Reference

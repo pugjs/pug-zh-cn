@@ -1,6 +1,7 @@
 ---
 title: Extends
 template: language
+id: language/extends
 ---
 
 # Extends &ndash; Template Inheritance

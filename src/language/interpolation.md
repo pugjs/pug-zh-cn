@@ -1,6 +1,7 @@
 ---
 title: Interpolation
 template: language
+id: language/interpolation
 ---
 
 <!--

@@ -1,6 +1,7 @@
 ---
 title: API Documentation
 template: generic
+id: api
 ---
 
 # API Documentation
