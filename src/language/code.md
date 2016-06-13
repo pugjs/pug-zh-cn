@@ -1,3 +1,8 @@
+---
+title: Code
+template: language
+---
+
 # Code
 
 Pug makes it possible to write inline JavaScript code in your templates. There are three types of code.

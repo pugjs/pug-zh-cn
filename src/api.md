@@ -1,3 +1,8 @@
+---
+title: API Documentation
+template: generic
+---
+
 # API Documentation
 
 This page details how to render Pug using the JavaScript API.

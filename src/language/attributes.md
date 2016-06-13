@@ -1,3 +1,8 @@
+---
+title: Attributes
+template: language
+---
+
 # Attributes
 
 Tag attributes look similar to html (with optional comma), however their values are just regular JavaScript.

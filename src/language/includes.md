@@ -1,3 +1,8 @@
+---
+title: Includes
+template: language
+---
+
 # Includes
 
 Includes allow you to insert the contents of one Pug file into another.

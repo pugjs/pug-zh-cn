@@ -1,3 +1,8 @@
+---
+title: Language Reference
+template: generic
+---
+
 # Language Reference
 
 Pug is a terse language for writing HTML templates. It is designed with the following goals in mind:

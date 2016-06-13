@@ -1,3 +1,8 @@
+---
+title: Filters
+template: language
+---
+
 # Filters
 
 Filters let you use other languages within a Pug template.  They take a block of plain text as an input. To pass options to the filter, add them inside parentheses after the filter name, just like one would do with [tag attributes]: `:less(ieCompat=false)`.

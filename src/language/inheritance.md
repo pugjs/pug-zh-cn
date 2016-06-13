@@ -1,4 +1,9 @@
-# Template inheritance
+---
+title: Template Inheritance
+template: language
+---
+
+# Template Inheritance
 
 Pug supports template inheritance via the `block` and `extends` keywords. A block is simply a "block" of Pug that may be replaced within a child template. This process is recursive.
 

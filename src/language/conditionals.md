@@ -1,3 +1,8 @@
+---
+title: Conditionals
+template: language
+---
+
 # Conditionals
 
 Pug's first-class conditional syntax allows for optional parenthesis, and you may now omit the leading `-` otherwise it's identical, still just regular javascript:

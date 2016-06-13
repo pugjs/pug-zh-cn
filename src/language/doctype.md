@@ -1,3 +1,8 @@
+---
+title: Doctype
+template: language
+---
+
 # Doctype
 
 ```pug-preview

@@ -1,3 +1,8 @@
+---
+title: Case
+template: language
+---
+
 # Case
 
 The case statement is a shorthand for JavaScript's `switch` statement and takes the following form:

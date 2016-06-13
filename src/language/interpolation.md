@@ -1,3 +1,8 @@
+---
+title: Interpolation
+template: language
+---
+
 <!--
 .panel-heading Hey!
 .panel-body

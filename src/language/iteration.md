@@ -1,3 +1,8 @@
+---
+title: Iteration
+template: language
+---
+
 # Iteration
 
 Pug supports two primary methods of iteration, `each` and `while`.

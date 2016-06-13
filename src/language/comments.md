@@ -1,3 +1,8 @@
+---
+title: Comments
+template: language
+---
+
 # Comments
 
 Single line comments look the same as JavaScript comments and must be placed on their own line:

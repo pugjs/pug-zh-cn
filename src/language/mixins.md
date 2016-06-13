@@ -1,3 +1,8 @@
+---
+title: Mixins
+template: language
+---
+
 # Mixins
 
 Mixins allow you to create reusable blocks of Pug.
