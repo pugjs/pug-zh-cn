@@ -1,6 +1,8 @@
 {
   "nav": {
     "api": "API",
+    "api/getting-started": "Getting Started",
+    "api/reference": "Reference",
     "language": "Language Reference",
     "language/attributes": "Attributes",
     "language/case": "Case",

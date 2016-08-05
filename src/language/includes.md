@@ -19,6 +19,7 @@ html
     p Welcome to my super lame site.
     include includes/foot.pug
 \\\\\\\\\\ includes/head.pug
+//- includes/head.pug
 head
   title My Site
   script(src='/javascripts/jquery.js')

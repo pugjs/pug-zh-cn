@@ -83,7 +83,7 @@ You could accomplish the same thing by writing an HTML tag inline with your Pug,
 
 The tag interpolation syntax is especially useful for inline tags, where whitespace before and after the tag is significant. By default, however, Pug removes all spaces before and after tags. Check out the following example:
 
-```pug-preview (beautify=false)
+```pug-preview
 p
   | If I don't write the paragraph with tag interpolation, tags like
   strong strong

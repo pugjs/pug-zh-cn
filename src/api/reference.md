@@ -1,64 +1,56 @@
 ---
-title: API Documentation
+title: API Reference
 template: generic
-id: api
+id: api/reference
 ---
 
 # API Documentation
 
 This page details how to render Pug using the JavaScript API.
 
-## Installation
-
-Via npm:
-
-```sh
-$ npm install pug
-```
-
-## Usage
-
-### Options
+## Options
 
 All API methods take the following set of options:
 
 ```parameter-list
-filename:
+filename
 ~ string
 ~ The name of the file being compiled. Used in exceptions, and required for relative includes and extends. Defaults to `'Pug'`.
-basedir:
+basedir
 ~ string
 ~ The root directory of all absolute inclusion.
-doctype:
+doctype
 ~ string
 ~ If the doctype is not specified as part of the template, you can specify it here. It is sometimes useful to get self-closing tags and remove mirroring of boolean attributes; see [doctype documentation](language/doctype.html#doctype-option) for more information.
-pretty:
+pretty
 ~ boolean | string
-~ Adds whitespace to the resulting HTML to make it easier for a human to read using <code>'&nbsp;&nbsp;'</code> as indentation. If a string is specified, that will be used as indentation instead (e.g. `'\t'`). Defaults to `false`.
-self:
+~ Adds whitespace to the resulting HTML to make it easier for a human to read using `'  '` as indentation. If a string is specified, that will be used as indentation instead (e.g. `'\t'`). Defaults to `false`.
+self
 ~ boolean
 ~ Use a `self` namespace to hold the locals. It will speed up the compilation, but instead of writing `variable` you will have to write `self.variable` to access a property of the locals object. Defaults to `false`.
-debug:
+debug
 ~ boolean
-~ If set to true, the tokens and function body are logged to stdout.
-compileDebug:
+~ If set to `true`, the tokens and function body are logged to stdout.
+compileDebug
 ~ boolean
-~ If set to true, the function source will be included in the compiled template for better error messages (sometimes useful in development). It is enabled by default unless used with express in production mode.
-globals:
+~ If set to `true`, the function source will be included in the compiled template for better error messages (sometimes useful in development). It is enabled by default unless used with express in production mode.
+globals
 ~ Array.<string>
 ~ Add a list of global names to make accessible in templates.
-cache:
+cache
 ~ boolean
-~ If set to true, compiled functions are cached. `filename` must be set as the cache key. Only applies to `render*`. Defaults to `false`.
-inlineRuntimeFunctions:
+~ If set to `true`, compiled functions are cached. `filename` must be set as the cache key. Only applies to `render` functions. Defaults to `false`.
+inlineRuntimeFunctions
 ~ boolean
-~ Inline runtime functions instead of `require`-ing them from a shared version. For client-side compilation, the default is true so that one does not have to include the runtime. For all other compilation or rendering types, the default is false.
-name:
+~ Inline runtime functions instead of `require`-ing them from a shared version. For `compileClient` functions, the default is `true` so that one does not have to include the runtime. For all other compilation or rendering types, the default is `false`.
+name
 ~ string
-~ The name of the template function. Only applies to `compile*Client*`. Defaults to `'template'`.
+~ The name of the template function. Only applies to `compileClient` functions. Defaults to `'template'`.
 ```
 
-### pug.compile(source[, options])
+## Methods
+
+### pug.compile(source, ?options)
 
 Compile a Pug template to a function which can be rendered multiple times with different locals.
 
@@ -67,11 +59,11 @@ source
 ~ string
 ~ The source Pug template to compile
 options
-~ options
+~ ?options
 ~ An options object
 ```
 
-```parameter-list-returns
+```parameter-list returns
 returns
 ~ function
 ~ A function to generate the HTML from an object containing locals
@@ -88,7 +80,7 @@ var html = fn(locals);
 // => '<string>of pug</string>'
 ```
 
-### pug.compileFile(path[, options])
+### pug.compileFile(path, ?options)
 
 Compile a Pug template from a file to a function which can be rendered multiple times with different locals.
 
@@ -97,11 +89,11 @@ source
 ~ string
 ~ The path to a Pug file
 options
-~ options
+~ ?options
 ~ An options object
 ```
 
-```parameter-list-returns
+```parameter-list returns
 returns
 ~ function
 ~ A function to generate the HTML from an object containing locals
@@ -118,7 +110,7 @@ var html = fn(locals);
 // => '<string>of pug</string>'
 ```
 
-### pug.compileClient(source[, options])
+### pug.compileClient(source, ?options)
 
 Compile a Pug template to a string of JavaScript that can be used client side along with the Pug runtime.
 
@@ -127,11 +119,11 @@ source
 ~ string
 ~ The Pug template to compile
 options
-~ options
+~ ?options
 ~ An options object
 ```
 
-```parameter-list-returns
+```parameter-list returns
 returns
 ~ string
 ~ A string of JavaScript representing a function
@@ -148,9 +140,9 @@ var html = fn(locals);
 // => 'function template(locals) { return "<string>of pug</string>"; }'
 ```
 
-### pug.compileClientWithDependenciesTracked(source[, options])
+### pug.compileClientWithDependenciesTracked(source, ?options)
 
-Same as [`compileClient`] except that this method returns an object of the form:
+Same as <code>[compileClient]</code> except that this method returns an object of the form:
 
 ```js
 {
@@ -161,7 +153,7 @@ Same as [`compileClient`] except that this method returns an object of the form:
 
 You should only use this method if you need `dependencies` to implement something like watching for changes to the Pug files.
 
-### pug.compileFileClient(path[, options])
+### pug.compileFileClient(path, ?options)
 
 Compile a Pug template file to a string of JavaScript that can be used client side along with the Pug runtime.
 
@@ -170,14 +162,14 @@ path
 ~ string
 ~ The path to a Pug file
 options
-~ options
+~ ?options
 ~ An options object
 options.name
 ~ string
 ~ If you pass a `.name` property on the options object, it will be used as the function name for your client side template function.
 ```
 
-```parameter-list-returns
+```parameter-list returns
 returns
 ~ string
 ~ A JavaScript function body.
@@ -249,21 +241,21 @@ Be sure to send the Pug runtime (`node_modules/pug/runtime.js`) to the client in
 </html>
 ```
 
-### pug.render(source[, options[, callback]])
+### pug.render(source, ?options, ?callback)
 
 ```parameter-list
 source
 ~ string
 ~ The source Pug template to render
 options
-~ options
+~ ?options
 ~ An options object, also used as the locals object
 callback
-~ function
+~ ?function
 ~ Node.js-style callback receiving the rendered results. **This callback is called synchronously.**
 ```
 
-```parameter-list-returns
+```parameter-list returns
 returns
 ~ string
 ~ The resulting HTML string
@@ -276,21 +268,21 @@ var html = pug.render('string of pug', options);
 // => '<string>of pug</string>'
 ```
 
-### pug.renderFile(path[, options[, callback]])
+### pug.renderFile(path, ?options, ?callback)
 
 ```parameter-list
 path
 ~ string
 ~ The path to the Pug file to render
 options
-~ options
+~ ?options
 ~ An options object, also used as the locals object
 callback
-~ function
+~ ?function
 ~ Node.js-style callback receiving the rendered results. **This callback is called synchronously.**
 ```
 
-```parameter-list-returns
+```parameter-list returns
 returns
 ~ string
 ~ The resulting HTML string
@@ -303,4 +295,4 @@ var html = pug.renderFile('path/to/file.pug', options);
 // ...
 ```
 
-[`compileClient`]: #pugcompileclientsource-options
+[compileClient]: #pugcompilesource-options
