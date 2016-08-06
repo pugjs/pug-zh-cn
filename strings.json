@@ -2,6 +2,7 @@
   "nav": {
     "api": "API",
     "api/getting-started": "Getting Started",
+    "api/express": "Express Integration",
     "api/reference": "Reference",
     "language": "Language Reference",
     "language/attributes": "Attributes",
@@ -19,5 +20,9 @@
     "language/mixins": "Mixins",
     "language/plain-text": "Plain Text",
     "language/tags": "Tags"
+  },
+  "navbar": {
+    "docs": "Docs",
+    "demo": "Demo"
   }
 }

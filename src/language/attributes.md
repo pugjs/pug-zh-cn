@@ -58,7 +58,7 @@ div(escaped="<code>")
 div(unescaped!="<code>")
 ```
 
-::: float danger
+::: float danger Caution
 Unescaped buffered code can be dangerous. You must be sure to sanitize any user inputs to avoid [cross-site scripting].
 :::
 

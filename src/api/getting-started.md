@@ -18,7 +18,9 @@ $ npm install pug
 
 ## Overview
 
-The general rendering process of Pug is simple. Pug first compiles the Pug source code into a JavaScript function that takes a data object (called "locals") as argument. After compilation is complete, the function will turn your data into an HTML string, and *voilà!* The compiled function can be used multiple times, so you won't have to compile the source code again.
+The general rendering process of Pug is simple. <code>[pug.compile()]</code> will compile the Pug source code into a JavaScript function that takes a data object (called "locals") as argument. Call that resultant function with your data, and *voilà!* it will return a string of HTML.
+
+The compiled function can be used multiple times, so you won't have to compile the source code again.
 
 ```pug
 //- template.pug
@@ -56,5 +58,6 @@ console.log(pug.renderFile('template.pug', {
 // "<p>Timothy's Pug source code!</p>"
 ```
 
+[pug.compile()]: reference.html#pugcompilesource-options
 [pug.render()]: reference.html#pugrendersource-options-callback
 [caching]: reference.html#options-cache

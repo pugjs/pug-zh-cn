@@ -64,7 +64,7 @@ mixin link(href, name)
 +link('/foo', 'foo')(class="btn")
 ```
 
-::: float note
+::: float info Note
 The values in `attributes` by default are already escaped so you should use `!=` to avoid escaping them a second time (see also [unescaped attributes]).
 :::
 

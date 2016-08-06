@@ -57,7 +57,7 @@ It can also be written inline with attributes, and supports the full range of Ja
 p!= 'This code is' + ' <strong>not</strong> escaped!'
 ```
 
-::: float danger
+::: float danger Caution
 Unescaped buffered code can be dangerous. You must be sure to sanitize any user
 inputs to avoid [cross-site scripting] (XSS).
 :::

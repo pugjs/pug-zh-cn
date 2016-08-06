@@ -4,9 +4,17 @@ template: generic
 id: api/reference
 ---
 
-# API Documentation
+# API Reference
 
 This page details how to render Pug using the JavaScript API.
+
+::: float info Tip
+Pug is available in your Web browser's console! Try
+
+```js
+pug.render('p Hello world!');
+```
+:::
 
 ## Options
 

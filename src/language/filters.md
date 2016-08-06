@@ -35,7 +35,7 @@ script
     console.log 'This is coffee script'
 ```
 
-::: float warning
+::: float warning Warning
 Filters are rendered at compile time, which makes them fast but also means that they cannot support dynamic content or options.
 
 By default, JSTransformer-based filters are also not available during compilation in the browser, unless the JSTransformer modules are explicitly packed and made available through a CommonJS platform like Browserify and Webpack. Templates pre-compiled on the server do not have this limitation.

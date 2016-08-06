@@ -29,6 +29,6 @@ html
     block content
 ```
 
-::: float note
+::: float info Note
 You can have multiple levels of inheritance, allowing you to create powerful hierarchies of templates.
 :::

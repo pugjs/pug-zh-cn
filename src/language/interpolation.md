@@ -62,7 +62,7 @@ You don't *have* to play it safe. You can buffer unescaped values into your temp
   p Joel: !{riskyBusiness}
 ```
 
-::: float danger
+::: float danger Caution
 Keep in mind that buffering unescaped content into your templates can be mighty risky if that content comes fresh from your users.  Never trust user input!
 :::
 
