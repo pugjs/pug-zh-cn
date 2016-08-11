@@ -159,5 +159,5 @@ div#foo(data-bar="foo")&attributes(attributes)
 Attributes applied using `&attributes` are not automatically escaped. You must be sure to sanitize any user inputs to avoid [cross-site scripting] (XSS). This is done for you if you are passing in `attributes` from a mixin call.
 :::
 
-[Mixin Attributes]: /reference/mixins#attributes
+[Mixin Attributes]: mixins.html#mixin-attributes
 [cross-site scripting]: https://en.wikipedia.org/wiki/Cross-site_scripting

@@ -2,6 +2,9 @@
 title: Filters
 template: language
 id: language/filters
+extraMods:
+  - jstransformer-coffee-script@1.1.0
+  - jstransformer-markdown-it@0.2.3
 ---
 
 # Filters
@@ -21,19 +24,19 @@ $ npm install --save jstransformer-markdown-it
 
 Now, you should be able to render the following template:
 
-```pug-preview (serverOnly)
+~~~pug-preview
 :markdown-it(linkify langPrefix='highlight-')
   # Markdown
 
   Markdown document with http://links.com and
 
-  \`\`\`js
+  ```js
   var codeBlocks;
-  \`\`\`
+  ```
 script
   :coffee-script
     console.log 'This is coffee script'
-```
+~~~
 
 ::: float warning Warning
 Filters are rendered at compile time, which makes them fast but also means that they cannot support dynamic content or options.
@@ -45,7 +48,7 @@ By default, JSTransformer-based filters are also not available during compilatio
 
 If the content of the filter is short, one can even use filters as if they are tags:
 
-```pug-preview server-only
+```pug-preview
 script
   :coffee-script alert 'crazy!'
 p
@@ -58,7 +61,7 @@ Multiple filters can be applied to the same block of text by specifying them on 
 
 In the following example, the script is first transformed by `babel`, and then by `cdata-js`.
 
-```pug-preview (serverOnly)
+```pug-preview
 script
   :cdata-js:babel(preset=['es2015'])
     const myFunc = () => `This is ES2015 in a CD${'ATA'}`;
@@ -92,5 +95,5 @@ p
 ```
 
 [tag attributes]: attributes.html
-[options]: ../api.html#options
+[options]: ../api/reference.html#options
 [JSTransformer modules]: https://www.npmjs.com/browse/keyword/jstransformer
