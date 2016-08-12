@@ -1,5 +1,5 @@
 {
-  "nav": {
+  "menu": {
     "api": "API",
     "api/getting-started": "Getting Started",
     "api/express": "Express Integration",
