@@ -192,7 +192,7 @@ h2 By #{author}
 
 Then, we compile the Pug file into a function string.
 
-```pug
+```js
 var fs = require('fs');
 var pug = require('pug');
 
