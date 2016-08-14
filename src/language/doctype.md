@@ -27,7 +27,9 @@ doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
 
 ## Doctype Option
 
-The doctype affects compilation in some other cases, for example self closing tags and [boolean attributes](attributes.html#boolean-attributes). For this reason, you might sometimes want to specify it manually. You can do this via the `doctype` option.
+In addition to being buffered in the output, a doctype in Pug can affect compilation in other ways. For example, whether self-closing tags end with `/>` or `>` depends on whether HTML or XML is specified. The output of [boolean attributes] could be affected as well.
+
+If, for whatever reason, it is not possible to use the `doctype` keyword (e.g. rendering HTML fragments), but you would still like to specify the doctype of the template, you could do so via the [`doctype` option].
 
 ```js
 var pug = require('./');
@@ -43,3 +45,6 @@ pug.render(source, {doctype: 'xml'});
 pug.render(source, {doctype: 'html'});
 // => '<img src="foo.png">'
 ```
+
+[boolean attributes]: attributes.html#boolean-attributes
+[`doctype` option]: ../api/reference.html#options

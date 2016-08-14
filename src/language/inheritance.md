@@ -1,6 +1,6 @@
 ---
 title: Template Inheritance
-template: language
+template: generic
 id: language/inheritance
 ---
 

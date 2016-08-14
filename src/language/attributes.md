@@ -6,11 +6,13 @@ id: language/attributes
 
 # Attributes
 
-Tag attributes look similar to html (with optional comma), however their values are just regular JavaScript.
+Tag attributes look similar to html (with optional comma), but their values are just regular JavaScript.
 
 ```pug-preview
 a(href='google.com') Google
+= '\n'
 a(class='button' href='google.com') Google
+= '\n'
 a(class='button', href='google.com') Google
 ```
 
@@ -20,6 +22,8 @@ All the normal JavaScript expressions work fine too:
 - var authenticated = true
 body(class=authenticated ? 'authed' : 'anon')
 ```
+
+## Multiline Attributes
 
 If you have many attributes, you can also spread them across many lines:
 
@@ -31,14 +35,7 @@ input(
 )
 ```
 
-If you have a very long attribute or need text interpolation, and your JavaScript runtime supports ES2015 template strings (including Node.js/io.js 1.0.0 and later), you can also utilize that syntax:
-
-```pug-preview (features=['templatestrings'])
-- var btnType = 'info'
-- var btnSize = 'lg'
-button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize)
-button(type='button' class=`btn btn-${btnType} btn-${btnSize}`)
-```
+If you have a single very long attribute, and your JavaScript runtime supports ES2015 [template strings] (including Node.js/io.js 1.0.0 and later), you can utilize that syntax for attributes:
 
 ```pug-preview (features=['templatestrings'])
 input(data-json=`
@@ -48,6 +45,58 @@ input(data-json=`
   }
 `)
 ```
+
+## Quoted Attributes
+
+If your attribute name contains odd characters that might interfere with JavaScript syntax, either quote it using `""` or `''`, or use commas to separate different attributes. Examples of such characters include `[]` and `()`, which are frequently used in Angular 2.
+
+```pug-preview
+//- In this case, `(click)` is treated as a
+//- function call instead of a attribute name,
+//- resulting in the unusual error.
+div(class='div-class' (click)='play()')
+```
+
+```pug-preview
+div(class='div-class', (click)='play()')
+div(class='div-class' '(click)'='play()')
+```
+
+## Attribute Interpolation
+
+::: float danger Caution
+Previous versions of Pug/Jade supported an interpolation syntax such as:
+
+```pug
+a(href="/#{url}") Link
+```
+
+This syntax is **no longer supported.** Alternatives could be found below. Check our [migration guide] for more information on other incompatibilities between Pug v2 and previous versions.
+:::
+
+If you would like to include variables in your attribute, you can do one of the following:
+
+1. Simply write the attribute in JavaScript:
+
+   ```pug-preview
+   - var url = 'pug-test.html';
+   a(href='/' + url) Link
+
+   = '\n'
+
+   - url = 'https://example.com/'
+   a(href=url) Another link
+   ```
+
+2. If your JavaScript runtime supports ES2015 [template strings] (including Node.js/io.js 1.0.0 and later), you can also utilize that syntax to simplify your attributes:
+
+   ```pug-preview (features=['templatestrings'])
+   - var btnType = 'info'
+   - var btnSize = 'lg'
+   button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize)
+   = '\n'
+   button(type='button' class=`btn btn-${btnType} btn-${btnSize}`)
+   ```
 
 ## Unescaped Attributes
 
@@ -68,8 +117,11 @@ Boolean attributes are mirrored by Pug, and boolean values (`true` and `false`) 
 
 ```pug-preview
 input(type='checkbox' checked)
+= '\n'
 input(type='checkbox' checked=true)
+= '\n'
 input(type='checkbox' checked=false)
+= '\n'
 input(type='checkbox' checked=true.toString())
 ```
 
@@ -77,9 +129,13 @@ If the doctype is `html` Pug knows not to mirror the attribute and uses the ters
 
 ```pug-preview
 doctype html
+= '\n'
 input(type='checkbox' checked)
+= '\n'
 input(type='checkbox' checked=true)
+= '\n'
 input(type='checkbox' checked=false)
+= '\n'
 input(type='checkbox' checked=true && 'checked')
 ```
 
@@ -99,6 +155,7 @@ The `class` attribute can be a string (like any normal attribute) but it can als
 ```pug-preview
 - var classes = ['foo', 'bar', 'baz']
 a(class=classes)
+= '\n'
 //- the class attribute may also be repeated to merge arrays
 a.bang(class=classes class=['bing'])
 ```
@@ -108,6 +165,7 @@ It can also be an object mapping class names to true or false values, which is u
 ```pug-preview
 - var currentUrl = '/about'
 a(class={active: currentUrl === '/'} href='/') Home
+= '\n'
 a(class={active: currentUrl === '/about'} href='/about') About
 ```
 
@@ -155,9 +213,11 @@ The object does not have to be an object literal. It can also just be a variable
 div#foo(data-bar="foo")&attributes(attributes)
 ```
 
-::: float danger
+::: float danger Caution
 Attributes applied using `&attributes` are not automatically escaped. You must be sure to sanitize any user inputs to avoid [cross-site scripting] (XSS). This is done for you if you are passing in `attributes` from a mixin call.
 :::
 
-[Mixin Attributes]: mixins.html#mixin-attributes
+[template strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+[mixin attributes]: mixins.html#mixin-attributes
 [cross-site scripting]: https://en.wikipedia.org/wiki/Cross-site_scripting
+[migration guide]: ../api/migration-v2.html

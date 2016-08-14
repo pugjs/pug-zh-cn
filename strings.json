@@ -4,6 +4,7 @@
     "api/getting-started": "Getting Started",
     "api/express": "Express Integration",
     "api/reference": "Reference",
+    "api/migration-v2": "Migrating to Pug 2",
     "language": "Language Reference",
     "language/attributes": "Attributes",
     "language/case": "Case",
