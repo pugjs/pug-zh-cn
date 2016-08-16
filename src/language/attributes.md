@@ -1,31 +1,32 @@
 ---
-title: Attributes
+title: 属性
 template: language
 id: language/attributes
 ---
 
-# Attributes
+# 属性
 
-Tag attributes look similar to html (with optional comma), but their values are just regular JavaScript.
+标签属性和 HTML 语法非常相似，但是它们的值就是普通 JS 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
 
 ```pug-preview
-a(href='google.com') Google
+a(href='baidu.com') 百度
 = '\n'
-a(class='button' href='google.com') Google
+a(class='button' href='baidu.com') 百度
 = '\n'
-a(class='button', href='google.com') Google
+a(class='button', href='baidu.com') 百度
 ```
 
-All the normal JavaScript expressions work fine too:
+所有 JS 表达式都能用：
 
 ```pug-preview
+//- 已登录
 - var authenticated = true
 body(class=authenticated ? 'authed' : 'anon')
 ```
 
-## Multiline Attributes
+## 多行属性
 
-If you have many attributes, you can also spread them across many lines:
+如果您有很多属性，您可以把它们分几行写：
 
 ```pug-preview
 input(
@@ -35,13 +36,13 @@ input(
 )
 ```
 
-If you have a single very long attribute, and your JavaScript runtime supports ES2015 [template strings] (including Node.js/io.js 1.0.0 and later), you can utilize that syntax for attributes:
+如果您有一个很长属性，并且您的 JS 运行时引擎支持 ES2015 [模板字符串]（包括 Node.js 和 io.js v1.0.0 和更新的版本），您可以使用它来写属性值：
 
 ```pug-preview (features=['templatestrings'])
 input(data-json=`
   {
-    "very-long": "piece of ",
-    "data": true
+    "非常": "长的",
+    "数据": true
   }
 `)
 ```
@@ -217,7 +218,7 @@ div#foo(data-bar="foo")&attributes(attributes)
 Attributes applied using `&attributes` are not automatically escaped. You must be sure to sanitize any user inputs to avoid [cross-site scripting] (XSS). This is done for you if you are passing in `attributes` from a mixin call.
 :::
 
-[template strings]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+[模板字符串]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_strings
 [mixin attributes]: mixins.html#mixin-attributes
 [cross-site scripting]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [migration guide]: ../api/migration-v2.html
