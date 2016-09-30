@@ -74,7 +74,7 @@ options
 ~ An options object
 ```
 
-```parameter-list returns
+```parameter-list (returns)
 returns
 ~ function
 ~ A function to generate the HTML from an object containing locals
@@ -96,7 +96,7 @@ var html = fn(locals);
 Compile a Pug template from a file to a function which can be rendered multiple times with different locals.
 
 ```parameter-list
-source
+path
 ~ string
 ~ The path to a Pug file
 options
@@ -104,7 +104,7 @@ options
 ~ An options object
 ```
 
-```parameter-list returns
+```parameter-list (returns)
 returns
 ~ function
 ~ A function to generate the HTML from an object containing locals
@@ -134,7 +134,7 @@ options
 ~ An options object
 ```
 
-```parameter-list returns
+```parameter-list (returns)
 returns
 ~ string
 ~ A string of JavaScript representing a function
@@ -180,7 +180,7 @@ options.name
 ~ If you pass a `.name` property on the options object, it will be used as the function name for your client side template function.
 ```
 
-```parameter-list returns
+```parameter-list (returns)
 returns
 ~ string
 ~ A JavaScript function body.
@@ -266,7 +266,7 @@ callback
 ~ Node.js-style callback receiving the rendered results. **This callback is called synchronously.**
 ```
 
-```parameter-list returns
+```parameter-list (returns)
 returns
 ~ string
 ~ The resulting HTML string
@@ -293,7 +293,7 @@ callback
 ~ Node.js-style callback receiving the rendered results. **This callback is called synchronously.**
 ```
 
-```parameter-list returns
+```parameter-list (returns)
 returns
 ~ string
 ~ The resulting HTML string

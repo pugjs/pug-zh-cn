@@ -12,7 +12,7 @@ This article details how you can convert your application to the latest version 
 
 ## Project Rename
 
-Due to a trademark issue, the project name has been changed from "Jade" to "Pug" in conjunction with the release of Pug 2.
+Due to a trademark issue, the project name has been changed from "Jade" to "Pug" in conjunction with the release of Pug 2. This also means that we have changed the official supported file extension from `.jade` to `.pug`. Although `.jade` is still supported, it is deprecated, and all users are encouraged to transition to `.pug` immediately.
 
 ## Removed Language Features
 
@@ -48,7 +48,7 @@ a(href='before#{link}after')
 a(href=link)
 
 //- (on Node.js/io.js ≥ 1.0.0)
-a(href=`before${link}after`) 
+a(href=`before${link}after`)
 //- (everywhere)
 a(href='before' + link + 'after')
 ```

@@ -2,12 +2,8 @@
 title: Filters
 template: language
 id: language/filters
-extraMods:
-  - babel-preset-es2015
-  - jstransformer-babel
-  - jstransformer-cdata-js
-  - jstransformer-coffee-script
-  - jstransformer-markdown-it
+extraScripts:
+  - /js/filters.js
 ---
 
 # Filters
