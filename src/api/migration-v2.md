@@ -130,7 +130,7 @@ Pug v2 允许通过插件自定义编译的行为，同时移除这些导出属�
 
 #### <code>client</code>
 
-该选项曾用于模板函数的编译。大约从三年前开始不推荐使用，并用 <code>[compileClient]</code> 函数代替，从那时起已经进行了警告。
+该选项曾用于模板函数的编译。大约从 2013 年起不推荐使用，并用 <code>[compileClient]</code> 函数代替，从那时起已经进行了警告。
 
 [doctypes]: https://www.npmjs.com/package/doctypes
 [js-stringify]: https://www.npmjs.com/package/js-stringify
