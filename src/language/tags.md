@@ -1,5 +1,5 @@
 ---
-title: Tags
+title: 标签
 template: language
 id: language/tags
 ---

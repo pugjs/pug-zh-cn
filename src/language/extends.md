@@ -1,5 +1,5 @@
 ---
-title: Extends
+title: 扩展
 template: language
 id: language/extends
 ---
