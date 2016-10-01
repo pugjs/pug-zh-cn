@@ -76,7 +76,7 @@ block content
       p 什么都没有
 ```
 
-<span id="to-do" />
+<span id="block-append-prepend" />
 ## 块内容的添补 append / prepend
 
 Pug 允许您去替换（默认的行为）、`prepend`（向头部添加内容），或者 `append`（向尾部添加内容）一个块。 假设您有一份默认的脚本要放在 `head` 块中，而且希望将它应用到 *每一个页面*，那么您可以这样做：

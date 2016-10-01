@@ -22,7 +22,7 @@ p foo
 p bar
 ```
 
-<span id="to-do" />
+<span id="block-comments" />
 ## 块注释
 
 一个格式正确的块注释应该像这样：
@@ -34,7 +34,7 @@ body
     都没关系。
 ```
 
-<span id="to-do" />
+<span id="conditional-comments" />
 ## 条件注释
 
 Pug 没有特殊的语法来表示条件注释（conditional comments）。不过因为所有以 `<` 开头的行都会被当作纯文本，因此直接写一个 HTML 风格的条件注释也是没问题的。

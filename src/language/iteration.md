@@ -8,7 +8,7 @@ id: language/iteration
 
 Pug 目前支持两种主要的迭代方式： `each` 和 `while`。
 
-<span id="to-do" />
+<span id="each" />
 ## each
 
 这是 Pug 的头等迭代方式，让您在模板中迭代数组和对象更为简便：
@@ -57,7 +57,7 @@ ul
 
 您也可以使用 `for` 作为 `each` 的别称。
 
-<span id="to-do" />
+<span id="while" />
 ## while
 
 您也可以使用 `while` 来创建一个循环：

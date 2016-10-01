@@ -6,7 +6,7 @@ id: api/getting-started
 
 # 入门指南
 
-<span id="to-do" />
+<span id="installation" />
 ## 安装
 
 Pug 可以通过 [npm] 获得:
@@ -17,7 +17,7 @@ $ npm install pug
 
 [npm]: https://www.npmjs.com/
 
-<span id="to-do" />
+<span id="overview" />
 ## 概要
 
 Pug 的渲染操作一般来说是相当简单的。 <code>[pug.compile()]</code> 会把 Pug 代码编译成一个 JavaScript 函数，并且这个函数有一个参数可用于传入数据（局部变量，`locals`）。调用这个编译出来的函数，并且传入您的数据， *很好！* 这时返回的就是用您提供的数据渲染的 HTML 字符串了。

@@ -8,7 +8,7 @@ id: api/express
 
 [Express] 完整地集成了 Pug。这是一个流行的 Node.js 网站框架，Pug 在其中作为一个视图引擎。您可以阅读 Express 优秀的 [文档][Express guide] 来了解 Express 是如何与 Pug 集成的。
 
-<span id="to-do" />
+<span id="production-defaults" />
 ## 生产环境下的默认配置
 
 在 Express 框架里，环境变量 `NODE_ENV` 用来告知网站应用程序：它执行的环境是开发环境，还是生产环境。Express 和 Pug 都会在生产环境下调整一些默认配置，以给用户提供更好的开箱即用的体验。特别是当 `process.env.NODE_ENV` 设置为 `'production'`、Pug 配合 Express 使用的时候，<code>[compileDebug]</code> 选项将默认是 `false`，同时 <code>[cache]</code> 选项默认是 `true`。
