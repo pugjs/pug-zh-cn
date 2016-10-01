@@ -4,9 +4,9 @@ template: language
 id: language/extends
 ---
 
-# Extends &ndash; Template Inheritance
+# 拓展 &ndash; 模板继承
 
-The `extends` keyword allows a template to extend a layout or parent template. It can then override certain pre-defined blocks of content.
+`extends` 关键字允许一个模板拓展一个布局或父模板。之后它就可以覆盖某些预定义的内容。
 
 ```pug-preview (name='extends')
 \\\\\\\\\\ index.pug
@@ -14,21 +14,21 @@ The `extends` keyword allows a template to extend a layout or parent template. I
 extends layout.pug
 
 block title
-  title Article Title
+  title 文章标题
 
 block content
-  h1 My Article
+  h1 我的文章
 \\\\\\\\\\ layout.pug
 //- layout.pug
 doctype html
 html
   head
     block title
-      title Default title
+      title 默认标题
   body
     block content
 ```
 
 ::: float info Note
-You can have multiple levels of inheritance, allowing you to create powerful hierarchies of templates.
+您可以通过做出多重继承来创建强大的模板层次关系。
 :::
