@@ -1,10 +1,10 @@
 ---
-title: 包含
+title: 包含 Include
 template: language
 id: language/includes
 ---
 
-# 包含
+# 包含 Include
 
 包含（include）功能允许您把另外的文件内容插入进来。
 

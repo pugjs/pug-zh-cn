@@ -1,12 +1,12 @@
 ---
-title: 过滤器
+title: 过滤器 Filter
 template: language
 id: language/filters
 extraScripts:
   - /js/filters.js
 ---
 
-# 过滤器
+# 过滤器 Filter
 
 过滤器可以让您在 Pug 中使用其他的语言。它们接受传入一个文本块的内容。向过滤器传递参数，只需要将参数如同 [标签属性][tag attributes] 一样，放在括号里即可，如：`:less(ieCompat=false)`
 

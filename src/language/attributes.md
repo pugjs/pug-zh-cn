@@ -1,10 +1,10 @@
 ---
-title: 属性
+title: 属性 Attribute
 template: language
 id: language/attributes
 ---
 
-# 属性
+# 属性 Attribute
 
 标签属性和 HTML 语法非常相似，但是它们的值就是普通 JavaScript 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
 

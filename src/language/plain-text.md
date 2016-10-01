@@ -1,10 +1,10 @@
 ---
-title: 纯文本
+title: 纯文本 Plain Text
 template: language
 id: language/plain-text
 ---
 
-# 纯文本
+# 纯文本 Plain Text
 
 Pug 提供了三种通常使用的方式来放置纯文本。它们在不同的情况下会派上不同的用途。
 

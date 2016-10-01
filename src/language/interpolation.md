@@ -1,5 +1,5 @@
 ---
-title: 嵌入
+title: 嵌入 Interpolation
 template: language
 id: language/interpolation
 ---
@@ -12,7 +12,7 @@ id: language/interpolation
     in these docs, is interactive. Edit it and see what happens!
 -->
 
-# 嵌入
+# 嵌入 Interpolation
 
 Pug 提供了若干种操作符以满足您不同的嵌入需求。
 

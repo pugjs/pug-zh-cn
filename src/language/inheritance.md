@@ -1,10 +1,10 @@
 ---
-title: 模板继承
+title: 模板继承 Inheritance
 template: generic
 id: language/inheritance
 ---
 
-# 模板继承
+# 模板继承 Inheritance
 
 Pug 支持使用 `block` 和 `extends` 关键字进行模板的继承。一个称之为“块”（block）的代码块，可以被子模板覆盖、替换。这个过程是递归的。
 

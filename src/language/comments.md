@@ -1,10 +1,10 @@
 ---
-title: 注释
+title: 注释 Comment
 template: language
 id: language/comments
 ---
 
-# 注释
+# 注释 Comment
 
 单行注释和 JavaScript 类似，但是必须独立一行。
 

@@ -1,10 +1,10 @@
 ---
-title: 代码
+title: 代码 Code
 template: language
 id: language/code
 ---
 
-# 代码
+# 代码 Code
 
 Pug 为您在模板中嵌入 JavaScript 提供了可能。这里有三种类型的代码。
 

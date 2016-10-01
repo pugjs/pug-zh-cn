@@ -1,10 +1,10 @@
 ---
-title: 标签
+title: 标签 Tag
 template: language
 id: language/tags
 ---
 
-# 标签
+# 标签 Tag
 
 在默认情况下，在每行文本的开头 (或者紧跟白字符的部分) 书写这个 HTML 标签的名称。缩进了的标签会被认为是嵌套关系，这样会构建一个类似于 HTML 代码的树状结构。
 

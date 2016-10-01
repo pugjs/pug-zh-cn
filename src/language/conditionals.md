@@ -1,10 +1,10 @@
 ---
-title: 条件
+title: 条件 Conditional
 template: language
 id: language/conditionals
 ---
 
-# 条件
+# 条件 Conditional
 
 Pug 的条件判断的一般形式的括号是可选的，所以您可以省略掉开头的 `-`，效果是完全相同的。类似一个常规的 JavaScript 语法形式。
 
