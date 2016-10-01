@@ -4,9 +4,9 @@ template: language
 id: language/case
 ---
 
-# 多分支判断 (case)
+# 分支 Case
 
-多分支判断 (case) 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式：
+`case` 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式：
 
 ```pug-preview
 - var friends = 10
@@ -19,7 +19,7 @@ case friends
     p 您有 #{friends} 个朋友
 ```
 
-## 多分支判断传递 (Case Fall Through)
+## 分支传递 (Case Fall Through)
 
 您可以像 JavaScript 中的 `switch` 语句那样使用传递 (Fall Through)。
 
