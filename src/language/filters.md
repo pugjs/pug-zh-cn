@@ -53,7 +53,7 @@ p
 
 p.
   在漫无边际的无聊纯文本构成的垃圾文字的海洋上，
-  突然一只 #[:markdown-it(inline) *Markdown*]
+  突然一只野生的 #[:markdown-it(inline) *Markdown*]
   出现在了我的视野。
 ```
 
