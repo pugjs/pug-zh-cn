@@ -29,7 +29,7 @@ basedir
 ~ 所有绝对定位的引用的根目录。
 doctype
 ~ string
-~ 如果 doctype 并不在模板里（比如它是一个 HTML 片段），那么你可以在这里指定它。在一些需要控制自闭合标签和布尔属性的代码风格的时候非常有用。您可以阅读 [doctype](../language/doctype.html#doctype-option) 的文档来了解更多细节。
+~ 如果 doctype 并不在模板里（比如它是一个 HTML 片段），那么您可以在这里指定它。在一些需要控制自闭合标签和布尔属性的代码风格的时候非常有用。您可以阅读 [doctype](../language/doctype.html#doctype-option) 的文档来了解更多细节。
 pretty
 ~ boolean | string
 ~ 在输出的 HTML 里添加 `'  '` 这样的空格缩进来获得更好的代码可读性。如果这里指定的是一个字符串（比如 `'\t'`），那么将会使用它来作为控制缩进的字符。默认为 `false`。

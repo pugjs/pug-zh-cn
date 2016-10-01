@@ -46,7 +46,7 @@ console.log(compiledFunction({
 // "<p>Forbes 的 Pug 代码！</p>"
 ```
 
-Pug 也提供了 <code>[pug.render()]</code> 系列的函数，它们把编译和渲染两个步骤合二为一。当然，在每次执行 `render` 的时候，这样一个模板函数都需要被重新编译一遍，这会在一定程度上影响性能。但同时，你也可以在执行 `render` 的时候配合使用 <code>[cache]</code> 选项，它将会把编译出来的函数自动存储到内部缓存中。
+Pug 也提供了 <code>[pug.render()]</code> 系列的函数，它们把编译和渲染两个步骤合二为一。当然，在每次执行 `render` 的时候，这样一个模板函数都需要被重新编译一遍，这会在一定程度上影响性能。但同时，您也可以在执行 `render` 的时候配合使用 <code>[cache]</code> 选项，它将会把编译出来的函数自动存储到内部缓存中。
 
 ```js
 const pug = require('pug');
