@@ -6,7 +6,7 @@ id: language/case
 
 # 多分支判断 (case)
 
-多分支判断 (case) 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式:
+多分支判断 (case) 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式：
 
 ```pug-preview
 - var friends = 10
