@@ -1,39 +1,39 @@
 ---
-title: Mixins
+title: Mixin
 template: language
 id: language/mixins
 ---
 
-# Mixins
+# Mixin
 
-Mixins allow you to create reusable blocks of Pug.
+Mixin 允许您在 Pug 中重复使用一整个代码块。
 
 ```pug-preview
-//- Declaration
+//- 定义
 mixin list
   ul
     li foo
     li bar
     li baz
-//- Use
+//- 使用
 +list
 +list
 ```
 
-They are compiled to functions and can take arguments:
+它们会被编译成函数形式，您可以传递一些参数：
 
 ```pug-preview
 mixin pet(name)
   li.pet= name
 ul
-  +pet('cat')
-  +pet('dog')
-  +pet('pig')
+  +pet('猫')
+  +pet('狗')
+  +pet('猪')
 ```
 
-## Mixin Blocks
+## Mixin 的块
 
-Mixins can also take a block of pug to act as the content:
+Mixin 也可以把一整个代码块像内容一样传递进来：
 
 ```pug-preview
 mixin article(title)
@@ -43,18 +43,18 @@ mixin article(title)
       if block
         block
       else
-        p No content provided
+        p 没有提供任何内容。
 
 +article('Hello world')
 
 +article('Hello world')
-  p This is my
-  p Amazing article
+  p 这是我
+  p 随便写的文章
 ```
 
-## Mixin Attributes
+## Mixin 的属性
 
-Mixins also get an implicit attributes argument taken from the attributes passed to the mixin:
+Mixin 也可以隐式地，从标签属性方式传入一个参数 `attributes`：
 
 ```pug-preview
 mixin link(href, name)
@@ -65,10 +65,10 @@ mixin link(href, name)
 ```
 
 ::: float info Note
-The values in `attributes` by default are already escaped so you should use `!=` to avoid escaping them a second time (see also [unescaped attributes]).
+`attributes` 里的值已经被（作为标签属性）转义了，所以您可能需要用 `!=` 的方式赋值以避免发生二次转义（详细解释可以查阅 [不转义的属性][unescaped attributes]）。
 :::
 
-You can also use mixins with [`&attributes`]:
+您也可以直接用 [`&attributes`] 方法来传递 `attributes` 参数：
 
 ```pug-preview
 mixin link(href, name)
@@ -77,9 +77,9 @@ mixin link(href, name)
 +link('/foo', 'foo')(class="btn")
 ```
 
-## Rest Arguments
+## 剩余参数
 
-You can write mixins that take an unknown number of arguments using the "rest arguments" syntax.  e.g.
+您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
 
 ```pug-preview
 mixin list(id, ...items)
