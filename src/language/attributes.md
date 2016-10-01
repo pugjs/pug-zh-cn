@@ -6,7 +6,7 @@ id: language/attributes
 
 # 属性
 
-标签属性和 HTML 语法非常相似，但是它们的值就是普通 JS 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
+标签属性和 HTML 语法非常相似，但是它们的值就是普通 JavaScript 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
 
 ```pug-preview
 a(href='baidu.com') 百度
@@ -16,7 +16,7 @@ a(class='button' href='baidu.com') 百度
 a(class='button', href='baidu.com') 百度
 ```
 
-所有 JS 表达式都能用：
+所有 JavaScript 表达式都能用：
 
 ```pug-preview
 //- 已登录
@@ -36,7 +36,7 @@ input(
 )
 ```
 
-如果您有一个很长属性，并且您的 JS 运行时引擎支持 ES2015 [模板字符串][template strings]（包括 Node.js 和 io.js v1.0.0 和更新的版本），您可以使用它来写属性值：
+如果您有一个很长属性，并且您的 JavaScript 运行时引擎支持 ES2015 [模板字符串][template strings]（包括 Node.js 和 io.js v1.0.0 和更新的版本），您可以使用它来写属性值：
 
 ```pug-preview (features=['templatestrings'])
 input(data-json=`
@@ -65,7 +65,7 @@ div(class='div-class' '(click)'='play()')
 ## 属性嵌入
 
 ::: float danger Caution
-在 Pug/Jade 的旧版本中支持一种嵌入语法:
+在 Pug / Jade 的旧版本中支持一种嵌入语法：
 
 ```pug
 a(href="/#{url}") Link
