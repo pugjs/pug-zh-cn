@@ -4,9 +4,9 @@ template: language
 id: language/extends
 ---
 
-# 拓展 &ndash; 模板继承
+# 扩展 &ndash; 模板继承
 
-`extends` 关键字允许一个模板拓展一个布局或父模板。之后它就可以覆盖某些预定义的内容。
+`extends` 关键字允许模板去扩展一个布局或父模板，这样它就可以覆盖某些预定义的内容。
 
 ```pug-preview (name='extends')
 \\\\\\\\\\ index.pug
@@ -30,5 +30,5 @@ html
 ```
 
 ::: float info Note
-您可以通过做出多重继承来创建强大的模板层次关系。
+您还可以通过多层的继承来创建强大的模板层次关系。
 :::
