@@ -1,25 +1,25 @@
 ---
-title: Filters
+title: 过滤器
 template: language
 id: language/filters
 extraScripts:
   - /js/filters.js
 ---
 
-# Filters
+# 过滤器
 
-Filters let you use other languages within a Pug template.  They take a block of plain text as an input. To pass options to the filter, add them inside parentheses after the filter name, just like one would do with [tag attributes]: `:less(ieCompat=false)`.
+过滤器可以让您在 Pug 中使用其他的语言。它们接受传入一个文本块的内容。向过滤器传递参数，只需要将参数如同 [标签属性][tag attributes] 一样，放在括号里即可，如：`:less(ieCompat=false)`
 
-All [JSTransformer modules] can be used as Pug filters. Popular filters include `:babel`, `:uglify-js`, `:scss`, and `:markdown-it`. Check out the documentation for the JSTransformer for the options supported for the specific filter. If you couldn't find an appropriate filter for your use case, you can also write your own [custom filter].
+所有的 [JSTransformer 模块][JSTransformer modules] 都可以被用作 Pug 的过滤器。有名的过滤器比如 `:babel`、`:uglify-js`、`:scss` 和 `:markdown-it`。阅读这些 JSTransformer 的文档来了解它们具体支持什么选项。如果您找不到一个您所期望的过滤器，您也可以自己写 [自定义过滤器][custom filter]。
 
-For example, if you want to be able to use CoffeeScript and Markdown (using Markdown-it renderer) in your Pug template, you would first make sure that these features are installed:
+举一个例子，如果您想要能在您的 Pug 模板中使用 CoffeeScript 语言和 Markdown 语言（使用 Markdown-it 渲染），那么您首先要确定这些东西已经安装好：
 
 ```sh
 $ npm install --save jstransformer-coffee-script
 $ npm install --save jstransformer-markdown-it
 ```
 
-Now, you should be able to render the following template:
+现在可以渲染下面这个模板了。
 
 ~~~pug-preview
 :markdown-it(linkify langPrefix='highlight-')
@@ -36,63 +36,63 @@ script
 ~~~
 
 ::: float warning Warning
-Filters are rendered at compile time, which makes them fast but also means that they cannot support dynamic content or options.
+过滤器在 Pug 编译的时候被渲染，这意味着它们可以很快呈现出来，但是同时也意味着它们不支持动态的内容和选项。
 
-By default, JSTransformer-based filters are also not available during compilation in the browser, unless the JSTransformer modules are explicitly packed and made available through a CommonJS platform like Browserify and Webpack. In fact, the page you are reading right now uses Browserify to make the filters available in the browser.
+默认情况下，基于 JSTransformer 的过滤器在浏览器上编译的时候也是不可用的，除非那个 JSTransformer 模块被明确地封装、引入了，并且通过一个 CommonJS 平台，比如 Browserify 或者 Webpack，使之可以在浏览器上执行。事实上，您现在正在阅读的这个页面就使用了 Browserify 使得过滤器能够在浏览器上执行。
 
-Templates pre-compiled on the server do not have this limitation.
+把模板放在服务器上编译渲染则不存在这个限制。
 :::
 
-## Inline Syntax
+## 行内语法
 
-If the content of the filter is short, one can even use filters as if they are tags:
+如果过滤器的内容很短，我们甚至可以像一个 HTML 标签一样去使用它：
 
 ```pug-preview
 p
-  :markdown-it(inline) **BOLD TEXT**
+  :markdown-it(inline) **加粗文字**
 
 p.
-  In the midst of a large amount of plain
-  text, suddenly a wild #[:markdown-it(inline) *Markdown*]
-  appeared.
+  在漫无边际的无聊纯文本构成的垃圾文字的海洋上，
+  突然一只 #[:markdown-it(inline) *Markdown*]
+  出现在了我的视野。
 ```
 
-## Nested Filters
+## 嵌套过滤器
 
-Multiple filters can be applied to the same block of text by specifying them on the same line. The text is first passed to the last filter, whose result will be transformed by the second last, etc.
+可以在一行里同时指定多个过滤器来对一个文本块进行处理。文本首先被传递到最后的过滤器，然后它的结果会被传到倒数第二个过滤器作为输入，以此类推。
 
-In the following example, the script is first transformed by `babel`, and then by `cdata-js`.
+在下面的例子里，内容将首先被 `babel` 过滤器处理，然后是 `cdata-js`。
 
 ```pug-preview
 script
   :cdata-js:babel(presets=['es2015'])
-    const myFunc = () => `This is ES2015 in a CD${'ATA'}`;
+    const myFunc = () => `这是一行在 CD${'ATA'} 里的 ES2015 代码`;
 ```
 
-## Custom Filters
+## 自定义过滤器
 
-You can add your own filters to Pug as well using the [`filters` option][options].
+您可以通过 [`filters` 选项][options] 向 Pug 提供您自定义的过滤器。
 
 ```pug-preview-readonly demo
 \\\\\\\\\\ options.js <
 options.filters = {
   'my-own-filter': function (text, options) {
-    if (options.addStart) text = 'Start\n' + text;
-    if (options.addEnd)   text = text + '\nEnd';
+    if (options.addStart) text = '始\n' + text;
+    if (options.addEnd)   text = text + '\n终';
     return text;
   }
 };
 \\\\\\\\\\ index.pug <
 p
   :my-own-filter(addStart addEnd)
-    Filter
-    Body
+    过滤
+    正文
 \\\\\\\\\\ output.html >
 <p>
-  Start
-  Filter
-  Body
-  End
+  始
+  过滤
+  正文
+  终
 </p>
 ```
 
