@@ -1,10 +1,10 @@
 ---
-title: 分支 Case
+title: 分支条件 Case
 template: language
 id: language/case
 ---
 
-# 分支 Case ~~ Case
+# 分支条件 Case ~~ Case
 
 `case` 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式：
 

@@ -7,7 +7,7 @@
     "api/migration-v2": "迁移到 Pug v2",
     "language": "语法",
     "language/attributes": "属性",
-    "language/case": "Case",
+    "language/case": "分支条件",
     "language/code": "代码",
     "language/comments": "注释",
     "language/conditionals": "条件",
