@@ -1,32 +1,32 @@
 ---
-title: Template Inheritance
+title: 模板继承 Inheritance
 template: generic
 id: language/inheritance
 ---
 
-# Template Inheritance
+# 模板继承 Inheritance ~~ Template Inheritance
 
-Pug supports template inheritance via the `block` and `extends` keywords. A block is simply a "block" of Pug that may be replaced within a child template. This process is recursive.
+Pug 支持使用 `block` 和 `extends` 关键字进行模板的继承。一个称之为“块”（block）的代码块，可以被子模板覆盖、替换。这个过程是递归的。
 
-Pug blocks can provide default content if desired, however optional as shown below by `block scripts`, `block content`, and `block foot`.
+Pug 的块可以提供一份默认内容，当然这是可选的，见下述 `block scripts`、`block content` 和 `block foot`。
 
 ```pug
 //- layout.pug
 html
   head
-    title My Site - #{title}
+    title 我的站点 - #{title}
     block scripts
       script(src='/jquery.js')
   body
     block content
     block foot
       #footer
-        p some footer content
+        p 一些页脚的内容
 ```
 
-Now to extend the layout, simply create a new file and use the `extends` directive as shown below, giving the path. You may now define one or more blocks that will override the parent block content, note that here the `foot` block is *not* redefined and will output "some footer content".
+现在我们来扩展这个布局：只需要简单地创建一个新文件，并如下所示用一句 `extends` 来指出这个被继承的模板的路径。您现在可以定义若干个新的块来覆盖父模板里对应的“父块”。值得注意的是，因为这里的 `foot` 块 *没有* 被重定义，所以会依然输出“一些页脚的内容”。
 
-In Pug v1, if no file extension is given, `.pug` is automatically appended to the path, but in Pug v2 this is behavior is deprecated.
+在 Pug v1 里，如果没有给出文件扩展名，会自动加上 `.pug`。但是这个特性在 Pug v2 中 *这是不赞成使用的*。
 
 ```pug
 //- page-a.pug
@@ -38,7 +38,7 @@ block scripts
 
 block content
   h1= title
-  - var pets = ['cat', 'dog']
+  - var pets = ['猫', '狗']
   each petName in pets
     include pet.pug
 ```
@@ -48,7 +48,7 @@ block content
 p= petName
 ```
 
-It's also possible to override a block to provide additional blocks, as shown in the following example where `content` now exposes a `sidebar` and `primary` block for overriding, or the child template could override `content` all together.
+同样，也可以覆盖一个块并在其中提供一些新的块。如下面的例子所展示的那样，`content` 块现在暴露出两个新的块 `sidebar` 和 `primary` 用来被扩展。当然，它的子模板也可以把整个 `content` 给覆盖掉。
 
 ```pug
 //- sub-layout.pug
@@ -57,10 +57,10 @@ extends layout.pug
 block content
   .sidebar
     block sidebar
-      p nothing
+      p 什么都没有
   .primary
     block primary
-      p nothing
+      p 什么都没有
 ```
 
 ```pug
@@ -70,15 +70,15 @@ extends sub-layout.pug
 block content
   .sidebar
     block sidebar
-      p nothing
+      p 什么都没有
   .primary
     block primary
-      p nothing
+      p 什么都没有
 ```
 
-## Block append / prepend
+## 块内容的添补 append / prepend ~~ Block append / prepend
 
-Pug allows you to `replace` (default), `prepend`, or `append` blocks. Suppose for example you have default scripts in a "head" block that you wish to utilize on *every* page, you might do this:
+Pug 允许您去替换（默认的行为）、`prepend`（向头部添加内容），或者 `append`（向尾部添加内容）一个块。 假设您有一份默认的脚本要放在 `head` 块中，而且希望将它应用到 *每一个页面*，那么您可以这样做：
 
 ```pug
 //- layout.pug
@@ -91,7 +91,7 @@ html
     block content
 ```
 
-Now suppose you have a page of your application for a JavaScript game, you want some game related scripts as well as these defaults, you can simply `append` the block:
+现在假设您有一个页面，那是一个 JavaScript 编写的游戏。您希望把一些游戏相关的脚本也像默认的那些脚本一样放进去，那么您只要简单地 `append` 这个块：
 
 ```pug
 //- page.pug
@@ -102,7 +102,7 @@ block append head
   script(src='/game.js')
 ```
 
-When using `block append` or `block prepend` the `block` is optional:
+当使用 `block append` 或者 `block prepend` 时，`block` 关键字是可省略的：
 
 ```pug
 //- page.pug

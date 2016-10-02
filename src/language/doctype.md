@@ -10,26 +10,26 @@ id: language/doctype
 doctype html
 ```
 
-## Doctype Shortcuts
+## Doctype 缩写 ~~ Doctype Shortcuts
 
-There are shortcuts for commonly used doctypes:
+以下是一些常用的 doctype 的缩写：
 
 ```doctypes
 ```
 
-## Custom Doctypes
+## 自定义 doctype ~~ Custom Doctypes
 
-You can also use your own literal custom doctype:
+您也可以自定义一个 doctype 字面值：
 
 ```pug-preview
 doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
 ```
 
-## Doctype Option
+## Doctype 选项 ~~ Doctype Option
 
-In addition to being buffered in the output, a doctype in Pug can affect compilation in other ways. For example, whether self-closing tags end with `/>` or `>` depends on whether HTML or XML is specified. The output of [boolean attributes] could be affected as well.
+Doctype 会影响 Pug 的编译结果。比如自闭合的标签是以 `/>` 还是以 `>` 结束，这取决于指定了是 HTML 还是 XML。[布尔值属性][boolean attributes]也同样会受到影响。
 
-If, for whatever reason, it is not possible to use the `doctype` keyword (e.g. rendering HTML fragments), but you would still like to specify the doctype of the template, you could do so via the [`doctype` option].
+如果因为某些原因，不能在模板里使用 `doctype` 关键字（比如需要渲染的是 HTML 的一个片段），但您依然需要指定 doctype 的时候，您就可以通过 [`doctype` 选项][`doctype` option]来设置了。
 
 ```js
 var pug = require('./');

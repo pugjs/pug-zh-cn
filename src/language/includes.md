@@ -1,12 +1,12 @@
 ---
-title: Includes
+title: 包含 Include
 template: language
 id: language/includes
 ---
 
-# Includes
+# 包含 Include ~~ Includes
 
-Includes allow you to insert the contents of one Pug file into another.
+包含（include）功能允许您把另外的文件内容插入进来。
 
 ```pug-preview
 \\\\\\\\\\ index.pug
@@ -15,13 +15,13 @@ doctype html
 html
   include includes/head.pug
   body
-    h1 My Site
-    p Welcome to my super lame site.
+    h1 我的网站
+    p 欢迎来到我这简陋得不能再简陋的网站。
     include includes/foot.pug
 \\\\\\\\\\ includes/head.pug
 //- includes/head.pug
 head
-  title My Site
+  title 我的网站
   script(src='/javascripts/jquery.js')
   script(src='/javascripts/app.js')
 \\\\\\\\\\ includes/foot.pug
@@ -30,13 +30,13 @@ footer#footer
   p Copyright (c) foobar
 ```
 
-The path of the included file, if specified absolutely (e.g. `include /root.pug`), is resolved by prepending `options.basedir` to the file name provided. Otherwise, the path is relative to the current file being compiled.
+被包含的文件的路径，如果是一个绝对路径（如 `include /root.pug`），那么前面会加上 `options.basedir` 选项属性来进行解析。否则，路径应该相对于正在被编译的当前文件。
 
-In Pug v1, if no file extension is given, `.pug` is automatically appended to the file name, but in Pug v2 this is behavior is removed.
+在 Pug v1 里，如果没有给出文件扩展名，会自动加上 `.pug`。但在 Pug v2 这个行为已经被移除。
 
-## Including Plain Text
+## 包含纯文本 ~~ Including Plain Text
 
-Including files that are not Pug just includes the raw text.
+被包含的如果不是 Pug 文件，那么就只会当作文本内容来引入。
 
 ```pug-preview
 \\\\\\\\\\ index.pug
@@ -47,8 +47,8 @@ html
     style
       include style.css
   body
-    h1 My Site
-    p Welcome to my super lame site.
+    h1 我的网站
+    p 欢迎来到我这简陋得不能再简陋的网站。
     script
       include script.js
 \\\\\\\\\\ style.css
@@ -58,12 +58,12 @@ h1 {
 }
 \\\\\\\\\\ script.js
 // script.js
-console.log('You are awesome');
+console.log('真了不起！');
 ```
 
-## Including Filtered Text
+## 使用过滤器包含文本 ~~ Including Filtered Text
 
-You can combine filters with includes to filter things as you include them.
+您可以合并过滤器和包含语句，从而做到引入文件内容并直接用过滤器处理它们。
 
 ```pug-preview-readonly
 \\\\\\\\\\ index.pug <
@@ -71,22 +71,22 @@ You can combine filters with includes to filter things as you include them.
 doctype html
 html
   head
-    title An Article
+    title 一篇文章
   body
     include:markdown-it article.md
 \\\\\\\\\\ article.md <
 # article.md
 
-This is an article written in markdown.
+这是一篇用 Markdown 写的文章。
 \\\\\\\\\\ output.html >
 <!DOCTYPE html>
 <html>
   <head>
-    <title>An Article</title>
+    <title>一篇文章</title>
   </head>
   <body>
     <h1>article.md</h1>
-    <p>This is an article written in markdown.</p>
+    <p>这是一篇用 Markdown 写的文章。</p>
   </body>
 </html>
 ```

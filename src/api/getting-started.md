@@ -1,14 +1,14 @@
 ---
-title: Getting Started
+title: 入门指南
 template: generic
 id: api/getting-started
 ---
 
-# Getting Started
+# 入门指南 ~~ Getting Started
 
-## Installation
+## 安装 ~~ Installation
 
-Pug is available via [npm]:
+Pug 可以通过 [npm] 获得:
 
 ```sh
 $ npm install pug
@@ -16,48 +16,48 @@ $ npm install pug
 
 [npm]: https://www.npmjs.com/
 
-## Overview
+## 概要 ~~ Overview
 
-The general rendering process of Pug is simple. <code>[pug.compile()]</code> will compile the Pug source code into a JavaScript function that takes a data object (called "locals") as argument. Call that resultant function with your data, and *voilà!* it will return a string of HTML.
+Pug 的渲染操作一般来说是相当简单的。 <code>[pug.compile()]</code> 会把 Pug 代码编译成一个 JavaScript 函数，并且这个函数有一个参数可用于传入数据（局部变量，`locals`）。调用这个编译出来的函数，并且传入您的数据，*很好！* 这时返回的就是用您提供的数据渲染的 HTML 字符串了。
 
-The compiled function can be used multiple times, so you won't have to compile the source code again.
+这个编译出来的函数可以被重复使用，也可以传入不同的数据。
 
 ```pug
 //- template.pug
-p #{name}'s Pug source code!
+p #{name}的 Pug 代码！
 ```
 
 ```js
 const pug = require('pug');
 
-// Compile the source code
+// 编译这份代码
 const compiledFunction = pug.compileFile('template.pug');
 
-// Render a set of data
+// 渲染一组数据
 console.log(compiledFunction({
-  name: 'Timothy'
+  name: '李莉'
 }));
-// "<p>Timothy's Pug source code!</p>"
+// "<p>李莉的 Pug 代码！</p>"
 
-// Render another set of data
+// 渲染另外一组数据
 console.log(compiledFunction({
-  name: 'Forbes'
+  name: '张伟'
 }));
-// "<p>Forbes's Pug source code!</p>"
+// "<p>张伟的 Pug 代码！</p>"
 ```
 
-Pug also provides the <code>[pug.render()]</code> family of functions that combine compiling and rendering into one step. However, the template function will be re-compiled every time `render` is called, which might impact the performance.
+Pug 也提供了 <code>[pug.render()]</code> 系列的函数，它们把编译和渲染两个步骤合二为一。当然，在每次执行 `render` 的时候，这样一个模板函数都需要被重新编译一遍，这会在一定程度上影响性能。但同时，您也可以在执行 `render` 的时候配合使用 <code>[cache]</code> 选项，它将会把编译出来的函数自动存储到内部缓存中。
 
 ```js
 const pug = require('pug');
 
-// Compile template.pug, and render a set of data
+// 编译并使用一组数据渲染 template.pug
 console.log(pug.renderFile('template.pug', {
   name: 'Timothy'
 }));
-// "<p>Timothy's Pug source code!</p>"
+// "<p>Timothy 的 Pug 代码！</p>"
 ```
 
 [pug.compile()]: reference.html#pugcompilesource-options
 [pug.render()]: reference.html#pugrendersource-options-callback
-[caching]: reference.html#options-cache
+[cache]: reference.html#options-cache

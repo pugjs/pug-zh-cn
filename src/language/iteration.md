@@ -1,16 +1,16 @@
 ---
-title: Iteration
+title: 迭代 Iteration
 template: language
 id: language/iteration
 ---
 
-# Iteration
+# 迭代 Iteration ~~ Iteration
 
-Pug supports two primary methods of iteration, `each` and `while`.
+Pug 目前支持两种主要的迭代方式： `each` 和 `while`。
 
 ## each
 
-Pug's first-class iteration syntax makes it easier to iterate over arrays and objects within a template:
+这是 Pug 的头等迭代方式，让您在模板中迭代数组和对象更为简便：
 
 ```pug-preview
 ul
@@ -18,32 +18,32 @@ ul
     li= val
 ```
 
-You can also get the index as you iterate:
+您还可以在迭代时获得索引值：
 
 ```pug-preview
 ul
-  each val, index in ['zero', 'one', 'two']
+  each val, index in ['〇', '一', '二']
     li= index + ': ' + val
 ```
 
-Pug also lets you iterate over the keys in an object:
+Pug 还让您能够迭代对象中的键值：
 
 ```pug-preview
 ul
-  each val, index in {1:'one',2:'two',3:'three'}
+  each val, index in {1:'一',2:'二',3:'三'}
     li= index + ': ' + val
 ```
 
-The object or array to iterate over is just plain JavaScript so it can be a variable or the result of a function call or almost anything else.
+用于迭代的对象或数组仅仅是个 JavaScript 表达式，因此它可以是变量、函数调用的结果，又或者其他的什么东西。
 
 ```pug-preview
 - var values = [];
 ul
-  each val in values.length ? values : ['There are no values']
+  each val in values.length ? values : ['没有内容']
     li= val
 ```
 
-One can also add an `else` block that will be executed if the array or object does not contain values to be iterated over. The following is equivalent to the example above:
+您还能添加一个 `else` 块，这个语句块将会在数组与对象没有可供迭代的值时被执行。下面这个例子和上面的例子的作用是等价的：
 
 ```pug-preview
 - var values = [];
@@ -51,14 +51,14 @@ ul
   each val in values
     li= val
   else
-    li There are no values
+    li 没有内容
 ```
 
-You can also use `for` as an alias of `each`.
+您也可以使用 `for` 作为 `each` 的别称。
 
 ## while
 
-You can also use `while` to create a loop:
+您也可以使用 `while` 来创建一个循环：
 
 ```pug-preview
 - var n = 0;

@@ -1,5 +1,5 @@
 ---
-title: Interpolation
+title: 嵌入 Interpolation
 template: language
 id: language/interpolation
 ---
@@ -12,84 +12,83 @@ id: language/interpolation
     in these docs, is interactive. Edit it and see what happens!
 -->
 
-# Interpolation
+# 嵌入 Interpolation ~~ Interpolation
 
-Pug provides operators for a variety of your different interpolative needs.
+Pug 提供了若干种操作符以满足您不同的嵌入需求。
 
-## String Interpolation, Escaped
+## 字符串嵌入，转义 ~~ String Interpolation, Escaped
 
-Consider the placement of the template locals `title`, `author`, and `theGreat` in the following template.
+观察下面例子中的局部变量 `title`、`author` 和 `theGreat` 是如何被嵌入模板的。
 
 ```pug-preview
 - var title = "On Dogs: Man's Best Friend";
 - var author = "enlore";
-- var theGreat = "<span>escape!</span>";
+- var theGreat = "<span>转义!</span>";
 
 h1= title
-p Written with love by #{author}
-p This will be safe: #{theGreat}
+p #{author} 笔下源于真情的创作。
+p 这是安全的：#{theGreat}
 ```
 
-`title` follows the basic pattern for evaluating a template local, but the code in between `#{` and `}` is evaluated, escaped, and the result buffered into the output of the template being rendered.
+`title` 被简单地求值；但在 `#{` 和 `}` 里面的代码也会被求值，转义，并最终嵌入到模板的渲染输出中。
 
-This can be any valid Javascript expression, so you can do whatever feels good.
+里面可以是任何的正确的 JavaScript 表达式，您可以自由发挥。
 
 ```pug-preview
 - var msg = "not my inside voice";
 p This is #{msg.toUpperCase()}
 ```
 
-Pug is smart enough to figure out where the expression ends, so you can even include `}` without escaping.
+Pug 足够聪明来分辨到底哪里才是嵌入表达式的结束，所以您不用担心表达式中有 `}`，也不需要额外的转义。
 
 ```pug-preview
-p No escaping for #{'}'}!
+p 不要转义 #{'}'}！
 ```
 
-If you need to include verbatim `#{`, you can either escape it or use interpolation (so meta!).
+如果您需要表示一个 `#{` 文本，您可以转义它，也可以用嵌入功能来生成（可以，这很元编程）。
 
 ```pug-preview
 p Escaping works with \#{interpolation}
 p Interpolation works with #{'#{interpolation}'} too!
 ```
 
-## String Interpolation, Unescaped
+## 字符串嵌入，不转义 ~~ String Interpolation, Unescaped
 
-You don't *have* to play it safe. You can buffer unescaped values into your templates, too.
+您当然也 *并不是必须* 要用安全的转义来构造内容。您可以嵌入没有转义的文本进入模板中。
 
 ```pug-preview
-- var riskyBusiness = "<em>Some of the girls are wearing my mother's clothing.</em>";
+- var riskyBusiness = "<em>我希望通过外籍教师 Peter 找一位英语笔友。</em>";
 .quote
-  p Joel: !{riskyBusiness}
+  p 李华：!{riskyBusiness}
 ```
 
-::: float danger Caution
-Keep in mind that buffering unescaped content into your templates can be mighty risky if that content comes fresh from your users.  Never trust user input!
+::: float danger 危险
+请您务必清醒地意识到，如果直接使用您的用户提供的数据，未进行转义的内容可能会带来安全风险。不要相信用户的输入！
 :::
 
-## Tag Interpolation
+## 标签嵌入 ~~ Tag Interpolation
 
-Interpolation works not only on JavaScript values, but on Pug as well using the tag interpolation syntax. It is used like so:
+嵌入功能不仅可以嵌入 JavaScript 表达式的值，也可以嵌入用 Pug 书写的标签。它看起来应该像这样：
 
 ```pug-preview
 p.
-  This is a very long and boring paragraph that spans multiple lines.
-  Suddenly there is a #[strong strongly worded phrase] that cannot be
-  #[em ignored].
+  这是一个很长很长而且还很无聊的段落，还没有结束，是的，非常非常地长。
+  突然出现了一个 #[strong 充满力量感的单词]，这确实让人难以 #[em 忽视]。
 ```
 
-You could accomplish the same thing by writing an HTML tag inline with your Pug, but then what's the point of writing the Pug? Wrap an inline Pug tag declaration in `#[` and `]` and it'll be evaluated and buffered into the content of its containing tag.
+您确实可以用行内的 HTML 代码做同样的事情。但问题是，怎么用 Pug 来做这件事情呢？将 Pug 的标签语句用 `#[` 和 `]` 括起来就可以了。它会被求值并嵌入到它原来位置的内容中。
 
-### Whitespace Control
+### 空格的调整 ~~ Whitespace Control
 
-The tag interpolation syntax is especially useful for inline tags, where whitespace before and after the tag is significant. By default, however, Pug removes all spaces before and after tags. Check out the following example:
+标签嵌入功能，在需要嵌入的位置上前后的空格非常关键的时候，就变得非常有用了。因为 Pug 默认会去除一个标签前后的所有空格。请观察下面一个例子：
 
 ```pug-preview
 p
-  | If I don't write the paragraph with tag interpolation, tags like
+  | 如果我不用嵌入功能来书写，一些标签比如
   strong strong
-  | and
+  | 和
   em em
-  | might produce unexpected results.
+  | 可能会产生意外的结果。
 p.
-  If I do, whitespace is #[strong respected] and #[em everybody] is happy.
+  如果用了嵌入，在 #[strong strong] 和 #[em em] 旁的空格就会让我舒服多了。
 ```

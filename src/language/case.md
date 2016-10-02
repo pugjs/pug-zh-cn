@@ -1,41 +1,41 @@
 ---
-title: Case
+title: 分支条件 Case
 template: language
 id: language/case
 ---
 
-# Case
+# 分支条件 Case ~~ Case
 
-The case statement is a shorthand for JavaScript's `switch` statement and takes the following form:
+`case` 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式：
 
 ```pug-preview
 - var friends = 10
 case friends
   when 0
-    p you have no friends
+    p 您没有朋友
   when 1
-    p you have a friend
+    p 您有一个朋友
   default
-    p you have #{friends} friends
+    p 您有 #{friends} 个朋友
 ```
 
-## Case Fall Through
+## 分支传递 (Case Fall Through) ~~ Case Fall Through
 
-You can use fall through just like in a `switch` statement in JavaScript.
+您可以像 JavaScript 中的 `switch` 语句那样使用传递（fall through）。
 
 ```pug-preview
 - var friends = 0
 case friends
   when 0
   when 1
-    p you have very few friends
+    p 您的朋友很少
   default
-    p you have #{friends} friends
+    p 您有 #{friends} 个朋友
 ```
 
-The difference however is that while fall through happens whenever a `break` statement is not explicitly included in JavaScript, in Pug it only happens when a block is completely missing.
+不同之处在于，在 JavaScript 中，传递会在明确地使用 `break` 语句之前一直进行。而在 Pug 中则是，传递会在遇到非空的语法块前一直进行下去。
 
-If you would like to not output anything in a specific case, add an explicit unbuffered `break`:
+在某些情况下，如果您不想输出任何东西的话，您可以明确地加上一个原生的 `break` 语句：
 
 ```pug-preview
 - var friends = 0
@@ -43,19 +43,19 @@ case friends
   when 0
     - break
   when 1
-    p you have very few friends
+    p 您的朋友很少
   default
-    p you have #{friends} friends
+    p 您有 #{friends} 个朋友
 ```
 
-## Block Expansion
+## 块展开 ~~ Block Expansion
 
-Block expansion may also be used:
+您也可以使用块展开的语法：
 
 ```pug-preview
 - var friends = 1
 case friends
-  when 0: p you have no friends
-  when 1: p you have a friend
-  default: p you have #{friends} friends
+  when 0: p 您没有朋友
+  when 1: p 您有一个朋友
+  default: p 您有 #{friends} 个朋友
 ```
