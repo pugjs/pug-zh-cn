@@ -4,7 +4,7 @@ template: language
 id: language/mixins
 ---
 
-# 混入 Mixin ~ Mixins
+# 混入 Mixin ~~ Mixins
 
 混入是一种允许您在 Pug 中重复使用一整个代码块的方法。
 
