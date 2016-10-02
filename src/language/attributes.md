@@ -160,7 +160,7 @@ a(class=classes)
 a.bang(class=classes class=['bing'])
 ```
 
-它还可以是一个将类名映射为 `true` 或 `false` 的对象，这在使用条件性类（conditional classes）的时候非常有用。
+它还可以是一个将类名映射为 `true` 或 `false` 的对象，这在使用条件性的类的时候非常有用。
 
 ```pug-preview
 - var currentUrl = '/about'
