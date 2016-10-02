@@ -36,7 +36,7 @@ input(
 )
 ```
 
-如果您有一个很长属性，并且您的 JavaScript 运行时引擎支持 ECMAScript 6 [模板字符串][template strings]（包括 Node.js 和 io.js v1.0.0 和更新的版本），您可以使用它来写属性值：
+如果您有一个很长属性，并且您的 JavaScript 运行时引擎支持 ECMAScript 2015 [模板字符串][template strings]（包括 Node.js 和 io.js v1.0.0 和更新的版本），您可以使用它来写属性值：
 
 ```pug-preview (features=['templatestrings'])
 input(data-json=`
@@ -88,7 +88,7 @@ a(href="/#{url}") Link
    a(href=url) 另一个链接
    ```
 
-2. 如果您的 JavaScript 运行时支持 ECMAScript 6 [模板字符串][template strings](包含在 Node.js/io.js 1.0.0 以及更新的版本当中)，那么您还可以使用这种方式来简化您的属性值：
+2. 如果您的 JavaScript 运行时支持 ECMAScript 2015 [模板字符串][template strings](包含在 Node.js/io.js 1.0.0 以及更新的版本当中)，那么您还可以使用这种方式来简化您的属性值：
 
    ```pug-preview (features=['templatestrings'])
    - var btnType = 'info'
