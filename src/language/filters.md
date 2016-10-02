@@ -66,7 +66,7 @@ p.
 ```pug-preview
 script
   :cdata-js:babel(presets=['es2015'])
-    const myFunc = () => `这是一行在 CD${'ATA'} 里的 ES2015 代码`;
+    const myFunc = () => `这是一行在 CD${'ATA'} 里的 ECMAScript 6 代码`;
 ```
 
 ## 自定义过滤器 ~~ Custom Filters

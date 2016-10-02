@@ -108,7 +108,7 @@ for a in b
 
 此前，`jade.utils` 对象包含了三个模板引擎内部比较有用的函数：
 
-`utils.merge` 已经从 Pug 中移除并不再使用。其功能大体上可以用 ECMAScript 2015 的 <code>[Object.assign]</code> 方法及其他变种来实现。
+`utils.merge` 已经从 Pug 中移除并不再使用。其功能大体上可以用 ECMAScript 6 的 <code>[Object.assign]</code> 方法及其他变种来实现。
 
 `utils.stringify` 已经从 Pug 分离出来到叫做 [js-stringify] 的包，同时有额外的跨站脚本攻击保护。建议所有用户都改用此代码包。
 
