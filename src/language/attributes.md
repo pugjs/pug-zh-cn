@@ -139,7 +139,7 @@ input(type='checkbox' checked=false)
 input(type='checkbox' checked=true && 'checked')
 ```
 
-## 样式（`style`）属性 ~~ Style Attributes
+## 样式属性 ~~ Style Attributes
 
 `style`（样式）属性可以是一个字符串（就像其他普通的属性一样）还可以是一个对象，这在部分样式是由 JavaScript 生成的情况下非常方便。
 
@@ -148,7 +148,7 @@ input(type='checkbox' checked=true && 'checked')
 a(style={color: 'red', background: 'green'})
 ```
 
-## 类（`class`）属性 ~~ Class Attributes
+## 类属性 ~~ Class Attributes
 
 `class`（类）属性可以是一个字符串（就像其他普通的属性一样）还可以是一个包含多个类名的数组，这在类是由 JavaScript 生成的情况下非常方便。
 
