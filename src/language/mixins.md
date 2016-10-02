@@ -4,9 +4,9 @@ template: language
 id: language/mixins
 ---
 
-# Mixin ~ Mixins
+# 混入 Mixin ~ Mixins
 
-Mixin 允许您在 Pug 中重复使用一整个代码块。
+混入是一种允许您在 Pug 中重复使用一整个代码块的方法。
 
 ```pug-preview
 //- 定义
@@ -31,9 +31,9 @@ ul
   +pet('猪')
 ```
 
-## Mixin 的块 ~~ Mixin Blocks
+## 混入的块 ~~ Mixin Blocks
 
-Mixin 也可以把一整个代码块像内容一样传递进来：
+混入也可以把一整个代码块像内容一样传递进来：
 
 ```pug-preview
 mixin article(title)
@@ -52,9 +52,9 @@ mixin article(title)
   p 随便写的文章
 ```
 
-## Mixin 的属性 ~~ Mixin Attributes
+## 混入的属性 ~~ Mixin Attributes
 
-Mixin 也可以隐式地，从标签属性方式传入一个参数 `attributes`：
+混入也可以隐式地，从标签属性方式传入一个参数 `attributes`：
 
 ```pug-preview
 mixin link(href, name)
