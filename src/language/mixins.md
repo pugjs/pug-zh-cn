@@ -54,7 +54,7 @@ mixin article(title)
 
 ## 混入的属性 ~~ Mixin Attributes
 
-混入也可以隐式地，从标签属性方式传入一个参数 `attributes`：
+混入也可以隐式地，从“标签属性”得到一个参数 `attributes`：
 
 ```pug-preview
 mixin link(href, name)
@@ -79,7 +79,7 @@ mixin link(href, name)
 
 ## 剩余参数 ~~ Rest Arguments
 
-您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
+您可以用剩余参数（Rest Arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
 
 ```pug-preview
 mixin list(id, ...items)

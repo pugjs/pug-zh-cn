@@ -48,9 +48,9 @@ case friends
     p 您有 #{friends} 个朋友
 ```
 
-## 语法块的展开 ~~ Block Expansion
+## 块展开 ~~ Block Expansion
 
-您也可以使用语法块展开：
+您也可以使用块展开的语法：
 
 ```pug-preview
 - var friends = 1

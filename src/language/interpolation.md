@@ -26,13 +26,13 @@ Pug 提供了若干种操作符以满足您不同的嵌入需求。
 - var theGreat = "<span>转义!</span>";
 
 h1= title
-p #{author} 源于真情的创作。
+p #{author} 笔下源于真情的创作。
 p 这是安全的：#{theGreat}
 ```
 
-`title` 被简单地求值；但在 `#{` 和 `}` 之间的文本也会被求值，转义，并最终嵌入到模板的渲染输出中。
+`title` 被简单地求值；但在 `#{` 和 `}` 里面的代码也会被求值，转义，并最终嵌入到模板的渲染输出中。
 
-这可以是任何的正确的 JavaScript 表达式，您可以自由发挥。
+里面可以是任何的正确的 JavaScript 表达式，您可以自由发挥。
 
 ```pug-preview
 - var msg = "not my inside voice";

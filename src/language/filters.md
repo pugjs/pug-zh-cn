@@ -71,7 +71,7 @@ script
 
 ## 自定义过滤器 ~~ Custom Filters
 
-您可以通过 [`filters` 选项][options] 向 Pug 提供您自定义的过滤器。
+您可以通过 [`filters` 选项][options] 给 Pug 提供您自定义的过滤器。
 
 ```pug-preview-readonly demo
 \\\\\\\\\\ options.js <

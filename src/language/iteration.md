@@ -22,7 +22,7 @@ ul
 
 ```pug-preview
 ul
-  each val, index in ['zero', 'one', 'two']
+  each val, index in ['〇', '一', '二']
     li= index + ': ' + val
 ```
 
@@ -30,7 +30,7 @@ Pug 还让您能够迭代对象中的键值：
 
 ```pug-preview
 ul
-  each val, index in {1:'one',2:'two',3:'three'}
+  each val, index in {1:'一',2:'二',3:'三'}
     li= index + ': ' + val
 ```
 
@@ -39,7 +39,7 @@ ul
 ```pug-preview
 - var values = [];
 ul
-  each val in values.length ? values : ['There are no values']
+  each val in values.length ? values : ['没有内容']
     li= val
 ```
 
@@ -51,7 +51,7 @@ ul
   each val in values
     li= val
   else
-    li There are no values
+    li 没有内容
 ```
 
 您也可以使用 `for` 作为 `each` 的别称。

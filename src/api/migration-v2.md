@@ -110,7 +110,7 @@ for a in b
 
 `utils.merge` 已经从 Pug 中移除并不再使用。其功能大体上可以用 ECMAScript 2015 的 <code>[Object.assign]</code> 方法及其他变种来实现。
 
-`utils.stringify` 已经从 Pug 分离出来到叫做 [js-stringify] 的包，同时有额外的跨站攻击保护。建议所有用户都改用此代码包。
+`utils.stringify` 已经从 Pug 分离出来到叫做 [js-stringify] 的包，同时有额外的跨站脚本攻击保护。建议所有用户都改用此代码包。
 
 `utils.walkAST` 已经分离到一个叫做 [pug-walk] 的包。
 

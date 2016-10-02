@@ -29,7 +29,7 @@ doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
 
 Doctype 会影响 Pug 的编译结果。比如自闭合的标签是以 `/>` 还是以 `>` 结束，这取决于指定了是 HTML 还是 XML。[布尔值属性][boolean attributes] 也同样会受到影响。
 
-如果有某些原因，不可以在模板里使用 `doctype` 关键字（比如需要渲染的是 HTML 的一个片段），但您依然需要指定 doctype 的时候，您就可以通过 [`doctype` 选项][`doctype` option] 来设置了。
+如果有某些原因使使得不能在模板里使用 `doctype` 关键字（比如需要渲染的是 HTML 的一个片段），但您依然需要指定 doctype 的时候，您就可以通过 [`doctype` 选项][`doctype` option] 来设置了。
 
 ```js
 var pug = require('./');

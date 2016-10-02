@@ -6,7 +6,7 @@ id: language/attributes
 
 # 属性 Attribute ~~ Attributes
 
-标签属性和 HTML 语法非常相似，但是它们的值就是普通 JavaScript 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
+标签属性和 HTML 语法非常相似，但它们的值就是普通的 JavaScript 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
 
 ```pug-preview
 a(href='baidu.com') 百度

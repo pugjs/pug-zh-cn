@@ -25,7 +25,7 @@ Pug 的条件判断的一般形式的括号是可选的，所以您可以省略�
     p.description 用户没有描述
 ```
 
-Pug 同样也提供了否定的版本 `unless`（下面示例的效果是等价的）：
+Pug 同样也提供了它的反义版本 `unless`（下面示例的效果是等价的）：
 
 ```pug-preview-readonly
 \\\\\\\\\\ a.pug <
