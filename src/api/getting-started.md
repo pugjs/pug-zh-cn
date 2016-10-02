@@ -24,7 +24,7 @@ Pug 的渲染操作一般来说是相当简单的。 <code>[pug.compile()]</code
 
 ```pug
 //- template.pug
-p #{name} 的 Pug 代码！
+p #{name}的 Pug 代码！
 ```
 
 ```js
@@ -35,15 +35,15 @@ const compiledFunction = pug.compileFile('template.pug');
 
 // 渲染一组数据
 console.log(compiledFunction({
-  name: 'Timothy'
+  name: '李莉'
 }));
-// "<p>Timothy 的 Pug 代码！</p>"
+// "<p>李莉的 Pug 代码！</p>"
 
 // 渲染另外一组数据
 console.log(compiledFunction({
-  name: 'Forbes'
+  name: '张伟'
 }));
-// "<p>Forbes 的 Pug 代码！</p>"
+// "<p>张伟的 Pug 代码！</p>"
 ```
 
 Pug 也提供了 <code>[pug.render()]</code> 系列的函数，它们把编译和渲染两个步骤合二为一。当然，在每次执行 `render` 的时候，这样一个模板函数都需要被重新编译一遍，这会在一定程度上影响性能。但同时，您也可以在执行 `render` 的时候配合使用 <code>[cache]</code> 选项，它将会把编译出来的函数自动存储到内部缓存中。
