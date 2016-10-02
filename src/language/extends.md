@@ -29,6 +29,6 @@ html
     block content
 ```
 
-::: float info Note
+::: float info 提示
 您还可以通过多层的继承来创建强大的模板层次关系。
 :::

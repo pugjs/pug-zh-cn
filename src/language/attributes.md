@@ -64,7 +64,7 @@ div(class='div-class' '(click)'='play()')
 
 ## 属性嵌入 ~~ Attribute Interpolation
 
-::: float danger Caution
+::: float danger 注意
 在 Pug / Jade 的旧版本中支持一种嵌入语法：
 
 ```pug
@@ -107,7 +107,7 @@ div(escaped="<code>")
 div(unescaped!="<code>")
 ```
 
-::: float danger Caution
+::: float danger 危险
 未经转义的缓存代码十分危险。您必须正确处理和过滤用户的输入来避免 [跨站脚本攻击][cross-site scripting]。
 :::
 
@@ -213,7 +213,7 @@ div#foo(data-bar="foo")&attributes({'data-foo': 'bar'})
 div#foo(data-bar="foo")&attributes(attributes)
 ```
 
-::: float danger Caution
+::: float danger 危险
 使用 `&attributes` 赋值的属性并不会经过自动转义过程。您必须正确处理和过滤用户的输入来避免 [跨站脚本攻击][cross-site scripting] (XSS)。 但是如果您是从一个 mixin 调用中使用 `attributes` 的话，这个过程就是自动的。
 :::
 

@@ -35,7 +35,7 @@ script
     console.log 'This is coffee script'
 ~~~
 
-::: float warning Warning
+::: float warning 警告
 过滤器在 Pug 编译的时候被渲染，这意味着它们可以很快呈现出来，但是同时也意味着它们不支持动态的内容和选项。
 
 默认情况下，基于 JSTransformer 的过滤器在浏览器上编译的时候也是不可用的，除非那个 JSTransformer 模块被明确地封装、引入了，并且通过一个 CommonJS 平台，比如 Browserify 或者 Webpack，使之可以在浏览器上执行。事实上，您现在正在阅读的这个页面就使用了 Browserify 使得过滤器能够在浏览器上执行。

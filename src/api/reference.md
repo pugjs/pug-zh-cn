@@ -8,7 +8,7 @@ id: api/reference
 
 此页面将详细说明如何 JavaScript API 来对 Pug 代码进行渲染。
 
-::: float info Tip
+::: float info 提示
 现在 Pug 可以在您的浏览器控制台上使用！想测试各种 Pug 的 API，您可以尝试在控制台输入：
 
 ```js
@@ -314,7 +314,7 @@ var html = pug.renderFile('path/to/file.pug', options);
 
 这个对象和 [`filters` 选项][options] 有着同样的语义，但它是全局地应用在所有 Pug 编译过程的。当一个过滤器名称同时出现在了 `pug.filters` 和 `options.filters` 里，本 `filters` 选项将被优先选择。
 
-::: float warning Deprecated
+::: float warning 不赞成使用
 不赞成使用这个属性，应该使用 [`filters` 选项][options] 取而代之。
 :::
 

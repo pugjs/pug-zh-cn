@@ -57,7 +57,7 @@ p
 p!= '这段文字' + ' <strong>没有</strong> 被转义！'
 ```
 
-::: float danger Caution
+::: float danger 危险
 不转义的输出可能是危险的，您必须确保任何来自用户的输入都是安全可靠的，以防止发生 [跨站脚本攻击][cross-site scripting]（XSS）。
 :::
 

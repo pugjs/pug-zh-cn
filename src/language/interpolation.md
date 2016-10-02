@@ -62,7 +62,7 @@ p Interpolation works with #{'#{interpolation}'} too!
   p 李华：!{riskyBusiness}
 ```
 
-::: float danger Caution
+::: float danger 危险
 请您务必清醒地意识到，如果直接使用您的用户提供的数据，未进行转义的内容可能会带来安全风险。不要相信用户的输入！
 :::
 
