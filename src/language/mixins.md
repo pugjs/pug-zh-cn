@@ -65,7 +65,7 @@ mixin link(href, name)
 ```
 
 ::: float info 提示
-`attributes` 里的值已经被（作为标签属性）转义了，所以您可能需要用 `!=` 的方式赋值以避免发生二次转义（详细解释可以查阅 [不转义的属性][unescaped attributes]）。
+`attributes` 里的值已经被（作为标签属性）转义了，所以您可能需要用 `!=` 的方式赋值以避免发生二次转义（详细解释可以查阅[不转义的属性][unescaped attributes]）。
 :::
 
 您也可以直接用 [`&attributes`] 方法来传递 `attributes` 参数：

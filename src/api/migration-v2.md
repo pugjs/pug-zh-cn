@@ -12,7 +12,7 @@ Pug v2 已经在 2016 年 8 月发布。为了尽可能改善新版本的体验�
 
 ## 新的名称 ~~ Project Rename
 
-因为商标方面的问题，这个项目的名称已经在 Pug v2 发布之际从“Jade”变更为“Pug”。这也意味着官方支持的文件扩展名从 `.jade` 变为 `.pug`。尽管依然支持 `.jade` ，但这是不赞成的，我们建议所有的用户都立刻将其改为 `.pug`。
+因为商标方面的问题，这个项目的名称已经在 Pug v2 发布之际从“Jade”变更为“Pug”。这也意味着官方支持的文件扩展名从 `.jade` 变为 `.pug`。尽管依然支持 `.jade`，但这是不赞成的，我们建议所有的用户都立刻将其改为 `.pug`。
 
 ## 已经移除的语言特性 ~~ Removed Language Features
 
@@ -53,7 +53,7 @@ a(href=`before${link}after`)
 a(href='before' + link + 'after')
 ```
 
-我们移除了在标签属性里的嵌入支持。它给实现平添了不必要的复杂度，而且也让用户不易注意到属性的赋值其实可以是任意的 JavaScript 表达式。阅读 [属性][attributes] 的文档来了解更多关于标签属性的语法。
+我们移除了在标签属性里的嵌入支持。它给实现平添了不必要的复杂度，而且也让用户不易注意到属性的赋值其实可以是任意的 JavaScript 表达式。阅读[属性][attributes]的文档来了解更多关于标签属性的语法。
 
 ### 带有前缀的 <code>each</code> 语法 ~~ Prefixed <code>each</code> Syntax
 
@@ -76,7 +76,7 @@ for a in b
   = a
 ```
 
-这里的 `each` 并非 JavaScript 的语法，在 JavaScript 代码行中使用 `each` “关键字”会让人感到非常困惑。没有括号的 `for` 关键字也是同样的情况。
+这里的 `each` 并非 JavaScript 的语法，在 JavaScript 代码行中使用 `each`“关键字”会让人感到非常困惑。没有括号的 `for` 关键字也是同样的情况。
 
 只需要简单地删去 `-`，您的代码应该就能重新工作。
 
@@ -88,7 +88,7 @@ for a in b
 
 #### <code>doctype</code>
 
-此前，未归档的对象 `jade.doctype` 是一个存放 [doctype 缩写][doctype shortcuts] 的哈希表。用户可以通过扩充这个对象来自定义额外的 doctype 缩写，或者修改已有的 doctype 缩写。
+此前，未归档的对象 `jade.doctype` 是一个存放 [doctype 缩写][doctype shortcuts]的哈希表。用户可以通过扩充这个对象来自定义额外的 doctype 缩写，或者修改已有的 doctype 缩写。
 
 在 Pug v2 中，这个对象已经从 Pug 分离出来，单独成为一个叫做 [doctypes] 的包。如果您要扩充 doctype 缩写，可以写成一个 `codeGen` 的插件。<!-- TODO -->
 
@@ -100,7 +100,7 @@ for a in b
 
 #### <code>selfClosing</code>
 
-此前，未归档的数组 `jade.selfClosing` 可以用于添加或者修改 [自闭合标签][self-closing tags] 的条目。
+此前，未归档的数组 `jade.selfClosing` 可以用于添加或者修改[自闭合标签][self-closing tags]的条目。
 
 在 Pug v2 中，这个数组已经从 Pug 分离出来，单独成为一个叫做 [void-elements] 的包。如果您要修改这个数组，可以写成一个 `codeGen` 的插件。<!-- TODO -->
 

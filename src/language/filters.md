@@ -8,9 +8,9 @@ extraScripts:
 
 # 过滤器 Filter ~~ Filters
 
-过滤器可以让您在 Pug 中使用其他的语言。它们接受传入一个文本块的内容。向过滤器传递参数，只需要将参数如同 [标签属性][tag attributes] 一样，放在括号里即可，如：`:less(ieCompat=false)`
+过滤器可以让您在 Pug 中使用其他的语言。它们接受传入一个文本块的内容。向过滤器传递参数，只需要将参数如同[标签属性][tag attributes]一样，放在括号里即可，如：`:less(ieCompat=false)`
 
-所有的 [JSTransformer 模块][JSTransformer modules] 都可以被用作 Pug 的过滤器。有名的过滤器比如 `:babel`、`:uglify-js`、`:scss` 和 `:markdown-it`。阅读这些 JSTransformer 的文档来了解它们具体支持什么选项。如果您找不到一个您所期望的过滤器，您也可以自己写 [自定义过滤器][custom filter]。
+所有的 [JSTransformer 模块][JSTransformer modules]都可以被用作 Pug 的过滤器。有名的过滤器比如 `:babel`、`:uglify-js`、`:scss` 和 `:markdown-it`。阅读这些 JSTransformer 的文档来了解它们具体支持什么选项。如果您找不到一个您所期望的过滤器，您也可以自己写[自定义过滤器][custom filter]。
 
 举一个例子，如果您想要能在您的 Pug 模板中使用 CoffeeScript 语言和 Markdown 语言（使用 Markdown-it 渲染），那么您首先要确定这些东西已经安装好：
 
@@ -71,7 +71,7 @@ script
 
 ## 自定义过滤器 ~~ Custom Filters
 
-您可以通过 [`filters` 选项][options] 给 Pug 提供您自定义的过滤器。
+您可以通过 [`filters` 选项][options]给 Pug 提供您自定义的过滤器。
 
 ```pug-preview-readonly demo
 \\\\\\\\\\ options.js <

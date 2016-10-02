@@ -6,7 +6,7 @@ id: api/express
 
 # 与 Express 集成 ~~ Express Integration
 
-[Express] 良好地集成了 Pug。这是一个流行的 Node.js 网站框架，Pug 在其中扮演一个视图引擎的角色。您可以阅读 Express 优秀的 [文档][Express guide] 来了解 Express 是如何与 Pug 集成的。
+[Express] 良好地集成了 Pug。这是一个流行的 Node.js 网站框架，Pug 在其中扮演一个视图引擎的角色。您可以阅读 Express 优秀的[文档][Express guide]来了解 Express 是如何与 Pug 集成的。
 
 ## 生产环境下的默认配置 ~~ Production Defaults
 

@@ -35,7 +35,7 @@ pretty
 ~ 在输出的 HTML 里添加 `'  '` 这样的空格缩进来获得更好的代码可读性。如果这里指定的是一个字符串（比如 `'\t'`），那么将会使用它来作为控制缩进的字符。默认为 `false`。
 filters
 ~ object
-~ 存放 [自定义过滤器](../language/filters.html#custom-filters) 的哈希表。默认为 `undefined`。
+~ 存放[自定义过滤器](../language/filters.html#custom-filters)的哈希表。默认为 `undefined`。
 self
 ~ boolean
 ~ 是否使用一个叫做 `self` 的命名空间来存放局部变量。这可以加速编译的过程，但是，相对于原来书写比如 `variable` 来访问局部变量，您将需要改为 `self.variable` 来访问它们。默认为 `false`。
@@ -310,12 +310,12 @@ var html = pug.renderFile('path/to/file.pug', options);
 
 ### pug.filters
 
-这是一个存放 [自定义过滤器][custom filters] 的哈希表。
+这是一个存放[自定义过滤器][custom filters]的哈希表。
 
-这个对象和 [`filters` 选项][options] 有着同样的语义，但它是全局地应用在所有 Pug 编译过程的。当一个过滤器名称同时出现在了 `pug.filters` 和 `options.filters` 里，本 `filters` 选项将被优先选择。
+这个对象和 [`filters` 选项][options]有着同样的语义，但它是全局地应用在所有 Pug 编译过程的。当一个过滤器名称同时出现在了 `pug.filters` 和 `options.filters` 里，本 `filters` 选项将被优先选择。
 
 ::: float warning 不赞成使用
-不赞成使用这个属性，应该使用 [`filters` 选项][options] 取而代之。
+不赞成使用这个属性，应该使用 [`filters` 选项][options]取而代之。
 :::
 
 [compileClient]: #pugcompilesource-options

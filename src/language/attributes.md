@@ -71,7 +71,7 @@ div(class='div-class' '(click)'='play()')
 a(href="/#{url}") Link
 ```
 
-这种语法 **已经不再被支持！** 它的相关替代可以在本文档的下面部分找到。另外请您参考我们的 [迁移指南][migration guide] 以获取更多 Pug v2 与之前版本的不兼容情形。
+这种语法 **已经不再被支持！** 它的相关替代可以在本文档的下面部分找到。另外请您参考我们的[迁移指南][migration guide]以获取更多 Pug v2 与之前版本的不兼容情形。
 :::
 
 如果您想要在您的属性当中使用变量的话，您可以这样做：
@@ -88,7 +88,7 @@ a(href="/#{url}") Link
    a(href=url) 另一个链接
    ```
 
-2. 如果您的 JavaScript 运行时支持 ECMAScript 6 [模板字符串][template strings] (包含在 Node.js/io.js 1.0.0 以及更新的版本当中)，那么您还可以使用这种方式来简化您的属性值：
+2. 如果您的 JavaScript 运行时支持 ECMAScript 6 [模板字符串][template strings](包含在 Node.js/io.js 1.0.0 以及更新的版本当中)，那么您还可以使用这种方式来简化您的属性值：
 
    ```pug-preview (features=['templatestrings'])
    - var btnType = 'info'
@@ -108,12 +108,12 @@ div(unescaped!="<code>")
 ```
 
 ::: float danger 危险
-未经转义的缓存代码十分危险。您必须正确处理和过滤用户的输入来避免 [跨站脚本攻击][cross-site scripting]。
+未经转义的缓存代码十分危险。您必须正确处理和过滤用户的输入来避免[跨站脚本攻击][cross-site scripting]。
 :::
 
 ## 布尔值属性 ~~ Boolean Attributes
 
-在 Pug 中，布尔值属性是经过映射的，这样布尔值 (`true` 和 `false`) 就能接受了。当没有指定值的时候，默认是 `true` 。
+在 Pug 中，布尔值属性是经过映射的，这样布尔值 (`true` 和 `false`) 就能接受了。当没有指定值的时候，默认是 `true`。
 
 ```pug-preview
 input(type='checkbox' checked)
@@ -214,7 +214,7 @@ div#foo(data-bar="foo")&attributes(attributes)
 ```
 
 ::: float danger 危险
-使用 `&attributes` 赋值的属性并不会经过自动转义过程。您必须正确处理和过滤用户的输入来避免 [跨站脚本攻击][cross-site scripting] (XSS)。 但是如果您是从一个 mixin 调用中使用 `attributes` 的话，这个过程就是自动的。
+使用 `&attributes` 赋值的属性并不会经过自动转义过程。您必须正确处理和过滤用户的输入来避免[跨站脚本攻击][cross-site scripting](XSS)。 但是如果您是从一个 mixin 调用中使用 `attributes` 的话，这个过程就是自动的。
 :::
 
 [template strings]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_strings
