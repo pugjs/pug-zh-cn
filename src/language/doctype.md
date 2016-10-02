@@ -17,7 +17,7 @@ doctype html
 ```doctypes
 ```
 
-## 自定义 Doctype ~~ Custom Doctypes
+## 自定义 doctype ~~ Custom Doctypes
 
 您也可以自定义一个 doctype 字面值：
 
