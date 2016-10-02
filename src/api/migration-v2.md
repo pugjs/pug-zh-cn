@@ -10,17 +10,17 @@ Pug v2 已经在 2016 年 8 月发布。为了尽可能改善新版本的体验�
 
 此页面将详细介绍您应该如何将代码从旧版本迁移到最新版本的 Pug 上。
 
-<span id="project-rename" />
+<span id="to-do" />
 ## 新的名称
 
 因为商标方面的问题，这个项目的名称已经在 Pug v2 发布之际从“Jade”变更为“Pug”。这也意味着官方支持的文件扩展名从 `.jade` 变为 `.pug`。尽管依然支持 `.jade` ，但这是不赞成的，我们建议所有的用户都立刻将其改为 `.pug`。
 
-<span id="removed-language-features" />
+<span id="to-do" />
 ## 已经移除的语言特性
 
 绝大多数被移除的内容都可以被 [pug-lint] 自动检测出来，这是我们官方提供的代码规范器。
 
-<span id="legacy-mixin-call" />
+<span id="to-do" />
 ### 传统 Mixin 调用
 
 ```pug-preview-readonly
@@ -36,7 +36,7 @@ mixin foo('whatever')
 
 我们移除了传统的调用 [mixin][mixins] 的语句，这样可以更容易区分 Mixin 的声明和调用。所有这类旧语句在 Jade v1 里都已经警告。
 
-<span id="attribute-interpolation" />
+<span id="to-do" />
 ### 属性嵌入
 
 ```pug-preview-readonly
@@ -59,7 +59,7 @@ a(href='before' + link + 'after')
 
 我们移除了在标签属性里的嵌入支持。它给实现平添了不必要的复杂度，而且也让用户不易注意到属性的赋值其实可以是任意的 JavaScript 表达式。阅读 [属性][attributes] 的文档来了解更多关于标签属性的语法。
 
-<span id="prefixed-each-syntax" />
+<span id="to-do" />
 ### 带有前缀的 <code>each</code> 语法
 
 ```pug-preview-readonly
@@ -85,36 +85,36 @@ for a in b
 
 只需要简单地删去 `-`，您的代码应该就能重新工作。
 
-<span id="removed-api" />
+<span id="to-do" />
 ## 已删除的 API
 
 以下导出属性和编译选项已经被移除。请确保您的代码没有使用它们。
 
-<span id="properties" />
+<span id="to-do" />
 ### 属性
 
-<span id="doctype" />
+<span id="to-do" />
 #### <code>doctype</code>
 
 此前，未归档的对象 `jade.doctype` 是一个存放 [doctype 缩写][doctype shortcuts] 的哈希表。用户可以通过扩充这个对象来自定义额外的 doctype 缩写，或者修改已有的 doctype 缩写。
 
 在 Pug v2 中，这个对象已经从 Pug 分离出来，单独成为一个叫做 [doctypes] 的包。如果您要扩充 doctype 缩写，可以写成一个 `codeGen` 的插件。<!-- TODO -->
 
-<span id="nodes" />
+<span id="to-do" />
 #### <code>nodes</code>
 
 此前，未归档的对象 `jade.nodes` 是一个存放（未归档的）Jade 抽象语法树节点的构造函数的哈希表。
 
 在 Pug v2 中，我们弃用了这种做法，取而代之的是使用抽象语法树节点的 `type` 属性实现鸭子类型。
 
-<span id="selfclosing" />
+<span id="to-do" />
 #### <code>selfClosing</code>
 
 此前，未归档的数组 `jade.selfClosing` 可以用于添加或者修改 [自闭合标签][self-closing tags] 的条目。
 
 在 Pug v2 中，这个数组已经从 Pug 分离出来，单独成为一个叫做 [void-elements] 的包。如果您要修改这个数组，可以写成一个 `codeGen` 的插件。<!-- TODO -->
 
-<span id="utils" />
+<span id="to-do" />
 #### <code>utils</code>
 
 此前，`jade.utils` 对象包含了三个模板引擎内部比较有用的函数：
@@ -125,7 +125,7 @@ for a in b
 
 `utils.walkAST` 已经分离到一个叫做 [pug-walk] 的包。
 
-<span id="compiler-lexer-parser" />
+<span id="to-do" />
 #### <code>Compiler</code>, <code>Lexer</code>, <code>Parser</code>
 
 此前，未归档的 Jade 的编译器（Compiler）、词法分析器（Lexer）和解析器（Parser）通过这三个属性导出。用户可以从这些类创建自己的编译器、词法分析器和解析器，从而自定义编译的行为。
@@ -134,15 +134,15 @@ Pug v2 允许通过插件自定义编译的行为，同时移除这些导出属�
 
 对应到 Pug v2 中，这几个类现在已经分为 [pug-code-gen]，[pug-lexer] 和 [pug-parser] 这几个包，并且有各种与旧版本不兼容的变更。
 
-<span id="options" />
+<span id="to-do" />
 ### 选项
 
-<span id="compiler-lexer-parser-2" />
+<span id="to-do" />
 #### <code>compiler</code>, <code>lexer</code>, <code>parser</code>
 
 这些选项曾被用于已经被移除的 [`Compiler`，`Lexer` 和 `Parser` 类](#compiler-lexer-parser)。
 
-<span id="client" />
+<span id="to-do" />
 #### <code>client</code>
 
 该选项曾用于模板函数的编译。大约从 2013 年起不推荐使用，并用 <code>[compileClient]</code> 函数代替，从那时起已经进行了警告。

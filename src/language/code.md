@@ -8,7 +8,7 @@ id: language/code
 
 Pug 为您在模板中嵌入 JavaScript 提供了可能。这里有三种类型的代码。
 
-<span id="unbuffered-code" />
+<span id="to-do" />
 ## 不输出的代码
 
 用 `-` 开始一段不直接进行输出的代码，比如：
@@ -28,7 +28,7 @@ each item in list
   li= item
 ```
 
-<span id="buffered-code" />
+<span id="to-do" />
 ## 带输出的代码
 
 用 `=` 开始一段带有输出的代码，它应该是可以被求值的一个 JavaScript 表达式。为安全起见，它将被 HTML 转义：
@@ -44,7 +44,7 @@ p
 p= '这个代码被 <转义> 了！'
 ```
 
-<span id="unescaped-buffered-code" />
+<span id="to-do" />
 ## 不转义的、带输出的代码
 
 用 `!=` 开始一段不转义的，带有输出的代码。这将不会做任何转义，所以用于执行用户的输入将会不安全：

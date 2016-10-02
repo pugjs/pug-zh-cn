@@ -16,7 +16,7 @@ pug.render('p Hello world!');
 ```
 :::
 
-<span id="options" />
+<span id="to-do" />
 ## 选项
 
 所有的 API 方法都可以使用以下的选项：
@@ -60,10 +60,10 @@ name
 ~ 模板函数的名称。仅用于 `compileClient` 函数。默认值是 `'template'`。
 ```
 
-<span id="methods" />
+<span id="to-do" />
 ## 方法
 
-<span id="pugcompilesource-options" />
+<span id="to-do" />
 ### pug.compile(source, ?options)
 
 把一个 Pug 模板编译成一个可多次使用、可传入不同局部变量渲染的函数。
@@ -94,7 +94,7 @@ var html = fn(locals);
 // => '<string>of pug</string>'
 ```
 
-<span id="pugcompilefilepath-options" />
+<span id="to-do" />
 ### pug.compileFile(path, ?options)
 
 从文件中读取一个 Pug 模板，并编译成一个可多次使用、可传入不同局部变量渲染的函数。
@@ -125,7 +125,7 @@ var html = fn(locals);
 // => '从 Pug 生成的 HTML 代码'
 ```
 
-<span id="pugcompileclientsource-options" />
+<span id="to-do" />
 ### pug.compileClient(source, ?options)
 
 把一个 Pug 模板编译成一份 JavaScript 代码字符串，它可以直接用在浏览器上而不需要 Pug 的运行时库。
@@ -156,7 +156,7 @@ var html = fn(locals);
 // => 'function template(locals) { return "从 Pug 生成的 HTML 代码"; }'
 ```
 
-<span id="pugcompileclientwithdependenciestrackedsource-options" />
+<span id="to-do" />
 ### pug.compileClientWithDependenciesTracked(source, ?options)
 
 与 <code>[compileClient]</code> 相似，但这个函数返回的是如下结构的对象：
@@ -170,7 +170,7 @@ var html = fn(locals);
 
 您应该仅在需要 `dependencies` 来实现一些诸如监视 Pug 文件变动的功能的情况下使用该函数。
 
-<span id="pugcompilefileclientpath-options" />
+<span id="to-do" />
 ### pug.compileFileClient(path, ?options)
 
 从文件中读取一个 Pug 模板并编译成一份 JavaScript 代码字符串，它可以直接用在浏览器上而不需要 Pug 的运行时库。
@@ -259,7 +259,7 @@ function fancyTemplateFun(locals) {
 </html>
 ```
 
-<span id="pugrendersource-options-callback" />
+<span id="to-do" />
 ### pug.render(source, ?options, ?callback)
 
 ```parameter-list
@@ -287,7 +287,7 @@ var html = pug.render('string of pug', options);
 // => '<string>of pug</string>'
 ```
 
-<span id="pugrenderfilepath-options-callback" />
+<span id="to-do" />
 ### pug.renderFile(path, ?options, ?callback)
 
 ```parameter-list
@@ -315,10 +315,10 @@ var html = pug.renderFile('path/to/file.pug', options);
 // ...
 ```
 
-<span id="properties" />
+<span id="to-do" />
 ## 属性
 
-<span id="pugfilters" />
+<span id="to-do" />
 ### pug.filters
 
 这是一个存放 [自定义过滤器][custom filters] 的哈希表。

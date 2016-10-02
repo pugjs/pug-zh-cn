@@ -43,7 +43,7 @@ script
 把模板放在服务器上编译渲染则不存在这个限制。
 :::
 
-<span id="inline-syntax" />
+<span id="to-do" />
 ## 行内语法
 
 如果过滤器的内容很短，我们甚至可以像一个 HTML 标签一样去使用它：
@@ -58,7 +58,7 @@ p.
   出现在了我的视野。
 ```
 
-<span id="nested-filters" />
+<span id="to-do" />
 ## 嵌套过滤器
 
 可以在一行里同时指定多个过滤器来对一个文本块进行处理。文本首先被传递到最后的过滤器，然后它的结果会被传到倒数第二个过滤器作为输入，以此类推。
@@ -71,7 +71,7 @@ script
     const myFunc = () => `这是一行在 CD${'ATA'} 里的 ES2015 代码`;
 ```
 
-<span id="custom-filters" />
+<span id="to-do" />
 ## 自定义过滤器
 
 您可以通过 [`filters` 选项][options] 向 Pug 提供您自定义的过滤器。
