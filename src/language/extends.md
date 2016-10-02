@@ -4,7 +4,7 @@ template: language
 id: language/extends
 ---
 
-# 扩展 Extend &ndash; 模板继承
+# 扩展 Extend &ndash; 模板继承 ~~ Extends &ndash; Template Inheritance
 
 `extends` 关键字允许模板去扩展一个布局或父模板，这样它就可以覆盖某些预定义的内容。
 

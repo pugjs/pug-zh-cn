@@ -4,7 +4,7 @@ template: generic
 id: api/reference
 ---
 
-# API 参考文档
+# API 参考文档 ~~ API Reference
 
 此页面将详细说明如何 JavaScript API 来对 Pug 代码进行渲染。
 
@@ -16,7 +16,7 @@ pug.render('p Hello world!');
 ```
 :::
 
-## 选项
+## 选项 ~~ Options
 
 所有的 API 方法都可以使用以下的选项：
 
@@ -59,7 +59,7 @@ name
 ~ 模板函数的名称。仅用于 `compileClient` 函数。默认值是 `'template'`。
 ```
 
-## 方法
+## 方法 ~~ Methods
 
 ### pug.compile(source, ?options)
 
@@ -306,7 +306,7 @@ var html = pug.renderFile('path/to/file.pug', options);
 // ...
 ```
 
-## 属性
+## 属性 ~~ Properties
 
 ### pug.filters
 

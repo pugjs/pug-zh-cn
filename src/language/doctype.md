@@ -10,14 +10,14 @@ id: language/doctype
 doctype html
 ```
 
-## Doctype 缩写
+## Doctype 缩写 ~~ Doctype Shortcuts
 
 以下是一些常用的 doctype 的缩写：
 
 ```doctypes
 ```
 
-## 自定义 Doctype
+## 自定义 Doctype ~~ Custom Doctypes
 
 您也可以自定义一个 doctype 字面值：
 
@@ -25,7 +25,7 @@ doctype html
 doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
 ```
 
-## Doctype 选项
+## Doctype 选项 ~~ Doctype Option
 
 Doctype 会影响 Pug 的编译结果。比如自闭合的标签是以 `/>` 还是以 `>` 结束，这取决于指定了是 HTML 还是 XML。[布尔值属性][boolean attributes] 也同样会受到影响。
 

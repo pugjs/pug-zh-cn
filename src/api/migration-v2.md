@@ -4,21 +4,21 @@ template: generic
 id: api/migration-v2
 ---
 
-# 迁移到 Pug v2
+# 迁移到 Pug v2 ~~ Migrating to Pug 2
 
 Pug v2 已经在 2016 年 8 月发布。为了尽可能改善新版本的体验，我们不得不作出决定，移除、或者不赞成使用一些 API 和未归档的特性。我们努力让这些变更尽可能不具破坏性。当前，这些变更大多数会以控制台输出的方式进行警告。
 
 此页面将详细介绍您应该如何将代码从旧版本迁移到最新版本的 Pug 上。
 
-## 新的名称
+## 新的名称 ~~ Project Rename
 
 因为商标方面的问题，这个项目的名称已经在 Pug v2 发布之际从“Jade”变更为“Pug”。这也意味着官方支持的文件扩展名从 `.jade` 变为 `.pug`。尽管依然支持 `.jade` ，但这是不赞成的，我们建议所有的用户都立刻将其改为 `.pug`。
 
-## 已经移除的语言特性
+## 已经移除的语言特性 ~~ Removed Language Features
 
 绝大多数被移除的内容都可以被 [pug-lint] 自动检测出来，这是我们官方提供的代码规范器。
 
-### 传统 Mixin 调用
+### 传统 Mixin 调用 ~~ Legacy Mixin Call
 
 ```pug-preview-readonly
 \\\\\\\\\\ old.pug <
@@ -33,7 +33,7 @@ mixin foo('whatever')
 
 我们移除了传统的调用 [mixin][mixins] 的语句，这样可以更容易区分 Mixin 的声明和调用。所有这类旧语句在 Jade v1 里都已经警告。
 
-### 属性嵌入
+### 属性嵌入 ~~ Attribute Interpolation
 
 ```pug-preview-readonly
 \\\\\\\\\\ old.pug <
@@ -55,7 +55,7 @@ a(href='before' + link + 'after')
 
 我们移除了在标签属性里的嵌入支持。它给实现平添了不必要的复杂度，而且也让用户不易注意到属性的赋值其实可以是任意的 JavaScript 表达式。阅读 [属性][attributes] 的文档来了解更多关于标签属性的语法。
 
-### 带有前缀的 <code>each</code> 语法
+### 带有前缀的 <code>each</code> 语法 ~~ Prefixed <code>each</code> Syntax
 
 ```pug-preview-readonly
 \\\\\\\\\\ old.pug <
@@ -80,11 +80,11 @@ for a in b
 
 只需要简单地删去 `-`，您的代码应该就能重新工作。
 
-## 已删除的 API
+## 已删除的 API ~~ Removed API
 
 以下导出属性和编译选项已经被移除。请确保您的代码没有使用它们。
 
-### 属性
+### 属性 ~~ Properties
 
 #### <code>doctype</code>
 
@@ -122,7 +122,7 @@ Pug v2 允许通过插件自定义编译的行为，同时移除这些导出属�
 
 对应到 Pug v2 中，这几个类现在已经分为 [pug-code-gen]，[pug-lexer] 和 [pug-parser] 这几个包，并且有各种与旧版本不兼容的变更。
 
-### 选项
+### 选项 ~~ Options
 
 #### <code>compiler</code>, <code>lexer</code>, <code>parser</code>
 

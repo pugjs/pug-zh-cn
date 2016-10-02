@@ -4,7 +4,7 @@ template: language
 id: language/iteration
 ---
 
-# 迭代 Iteration
+# 迭代 Iteration ~~ Iteration
 
 Pug 目前支持两种主要的迭代方式： `each` 和 `while`。
 

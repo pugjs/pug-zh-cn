@@ -4,7 +4,7 @@ template: language
 id: language/includes
 ---
 
-# 包含 Include
+# 包含 Include ~~ Includes
 
 包含（include）功能允许您把另外的文件内容插入进来。
 
@@ -34,7 +34,7 @@ footer#footer
 
 在 Pug v1 里，如果没有给出文件扩展名，会自动加上 `.pug`。但在 Pug v2 这个行为已经被移除。
 
-## 包含纯文本
+## 包含纯文本 ~~ Including Plain Text
 
 被包含的如果不是 Pug 文件，那么就只会当作文本内容来引入。
 
@@ -61,7 +61,7 @@ h1 {
 console.log('真了不起！');
 ```
 
-## 使用过滤器包含文本
+## 使用过滤器包含文本 ~~ Including Filtered Text
 
 您可以合并过滤器和包含语句，从而做到引入文件内容并直接用过滤器处理它们。
 

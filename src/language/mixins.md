@@ -4,7 +4,7 @@ template: language
 id: language/mixins
 ---
 
-# Mixin
+# Mixin ~ Mixins
 
 Mixin 允许您在 Pug 中重复使用一整个代码块。
 
@@ -31,7 +31,7 @@ ul
   +pet('猪')
 ```
 
-## Mixin 的块
+## Mixin 的块 ~~ Mixin Blocks
 
 Mixin 也可以把一整个代码块像内容一样传递进来：
 
@@ -52,7 +52,7 @@ mixin article(title)
   p 随便写的文章
 ```
 
-## Mixin 的属性
+## Mixin 的属性 ~~ Mixin Attributes
 
 Mixin 也可以隐式地，从标签属性方式传入一个参数 `attributes`：
 
@@ -77,7 +77,7 @@ mixin link(href, name)
 +link('/foo', 'foo')(class="btn")
 ```
 
-## 剩余参数
+## 剩余参数 ~~ Rest Arguments
 
 您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
 

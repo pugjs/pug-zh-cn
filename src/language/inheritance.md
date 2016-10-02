@@ -4,7 +4,7 @@ template: generic
 id: language/inheritance
 ---
 
-# 模板继承 Inheritance
+# 模板继承 Inheritance ~~ Template Inheritance
 
 Pug 支持使用 `block` 和 `extends` 关键字进行模板的继承。一个称之为“块”（block）的代码块，可以被子模板覆盖、替换。这个过程是递归的。
 
@@ -76,7 +76,7 @@ block content
       p 什么都没有
 ```
 
-## 块内容的添补 append / prepend
+## 块内容的添补 append / prepend ~~ Block append / prepend
 
 Pug 允许您去替换（默认的行为）、`prepend`（向头部添加内容），或者 `append`（向尾部添加内容）一个块。 假设您有一份默认的脚本要放在 `head` 块中，而且希望将它应用到 *每一个页面*，那么您可以这样做：
 

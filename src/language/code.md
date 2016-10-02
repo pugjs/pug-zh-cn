@@ -4,11 +4,11 @@ template: language
 id: language/code
 ---
 
-# 代码 Code
+# 代码 Code ~~ Code
 
 Pug 为您在模板中嵌入 JavaScript 提供了可能。这里有三种类型的代码。
 
-## 不输出的代码
+## 不输出的代码 ~~ Unbuffered Code
 
 用 `-` 开始一段不直接进行输出的代码，比如：
 
@@ -27,7 +27,7 @@ each item in list
   li= item
 ```
 
-## 带输出的代码
+## 带输出的代码 ~~ Buffered Code
 
 用 `=` 开始一段带有输出的代码，它应该是可以被求值的一个 JavaScript 表达式。为安全起见，它将被 HTML 转义：
 
@@ -42,7 +42,7 @@ p
 p= '这个代码被 <转义> 了！'
 ```
 
-## 不转义的、带输出的代码
+## 不转义的、带输出的代码 ~~ Unescaped Buffered Code
 
 用 `!=` 开始一段不转义的，带有输出的代码。这将不会做任何转义，所以用于执行用户的输入将会不安全：
 

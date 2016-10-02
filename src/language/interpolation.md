@@ -12,11 +12,11 @@ id: language/interpolation
     in these docs, is interactive. Edit it and see what happens!
 -->
 
-# 嵌入 Interpolation
+# 嵌入 Interpolation ~~ Interpolation
 
 Pug 提供了若干种操作符以满足您不同的嵌入需求。
 
-## 字符串嵌入，转义
+## 字符串嵌入，转义 ~~ String Interpolation, Escaped
 
 观察下面例子中的局部变量 `title`、`author` 和 `theGreat` 是如何被嵌入模板的。
 
@@ -52,7 +52,7 @@ p Escaping works with \#{interpolation}
 p Interpolation works with #{'#{interpolation}'} too!
 ```
 
-## 字符串嵌入，不转义
+## 字符串嵌入，不转义 ~~ String Interpolation, Unescaped
 
 您当然也 *并不是必须* 要用安全的转义来构造内容。您可以嵌入没有转义的文本进入模板中。
 
@@ -66,7 +66,7 @@ p Interpolation works with #{'#{interpolation}'} too!
 请您务必清醒地意识到，如果直接使用您的用户提供的数据，未进行转义的内容可能会带来安全风险。不要相信用户的输入！
 :::
 
-## 标签嵌入
+## 标签嵌入 ~~ Tag Interpolation
 
 嵌入功能不仅可以嵌入 JavaScript 表达式的值，也可以嵌入用 Pug 书写的标签。它看起来应该像这样：
 
@@ -78,7 +78,7 @@ p.
 
 您确实可以用行内的 HTML 代码做同样的事情。但问题是，怎么用 Pug 来做这件事情呢？将 Pug 的标签语句用 `#[` 和 `]` 括起来就可以了。它会被求值并嵌入到它原来位置的内容中。
 
-### 空格的调整
+### 空格的调整 ~~ Whitespace Control
 
 标签嵌入功能，在需要嵌入的位置上前后的空格非常关键的时候，就变得非常有用了。因为 Pug 默认会去除一个标签前后的所有空格。请观察下面一个例子：
 
