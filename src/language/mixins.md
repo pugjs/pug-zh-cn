@@ -79,7 +79,7 @@ mixin link(href, name)
 
 ## 剩余参数 ~~ Rest Arguments
 
-您可以用剩余参数（Rest Arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
+您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
 
 ```pug-preview
 mixin list(id, ...items)

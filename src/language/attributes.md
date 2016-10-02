@@ -100,7 +100,7 @@ a(href="/#{url}") Link
 
 ## 不转义的属性 ~~ Unescaped Attributes
 
-在默认情况下，所有的属性都经过转义 (即把特殊字符转换成转义序列) 来防止诸如跨站脚本攻击之类的攻击方式。如果您非要使用特殊符号，您需要使用 `!=` 而不是 `=`。
+在默认情况下，所有的属性都经过转义（即把特殊字符转换成转义序列）来防止诸如跨站脚本攻击之类的攻击方式。如果您非要使用特殊符号，您需要使用 `!=` 而不是 `=`。
 
 ```pug-preview
 div(escaped="<code>")
@@ -113,7 +113,7 @@ div(unescaped!="<code>")
 
 ## 布尔值属性 ~~ Boolean Attributes
 
-在 Pug 中，布尔值属性是经过映射的，这样布尔值 (`true` 和 `false`) 就能接受了。当没有指定值的时候，默认是 `true`。
+在 Pug 中，布尔值属性是经过映射的，这样布尔值（`true` 和 `false`）就能接受了。当没有指定值的时候，默认是 `true`。
 
 ```pug-preview
 input(type='checkbox' checked)
@@ -125,7 +125,7 @@ input(type='checkbox' checked=false)
 input(type='checkbox' checked=true.toString())
 ```
 
-如果 doctype 是 `html` 的话，Pug 就不会去映射属性，而是使用缩写样式 (terse style)(所有浏览器都应该支持)。
+如果 doctype 是 `html` 的话，Pug 就不会去映射属性，而是使用缩写样式（terse style）（所有浏览器都应该支持）。
 
 ```pug-preview
 doctype html
@@ -139,18 +139,18 @@ input(type='checkbox' checked=false)
 input(type='checkbox' checked=true && 'checked')
 ```
 
-## 样式 (style) 属性 ~~ Style Attributes
+## 样式（`style`）属性 ~~ Style Attributes
 
-`style` (样式) 属性可以是一个字符串 (就像其他普通的属性一样) 还可以是一个对象，这在部分样式是由 JavaScript 生成的情况下非常方便。
+`style`（样式）属性可以是一个字符串（就像其他普通的属性一样）还可以是一个对象，这在部分样式是由 JavaScript 生成的情况下非常方便。
 
 
 ```pug-preview
 a(style={color: 'red', background: 'green'})
 ```
 
-## 类 (class) 属性 ~~ Class Attributes
+## 类（`class`）属性 ~~ Class Attributes
 
-`class` (类) 属性可以是一个字符串 (就像其他普通的属性一样) 还可以是一个包含多个类名的数组，这在类是由 JavaScript 生成的情况下非常方便。
+`class`（类）属性可以是一个字符串（就像其他普通的属性一样）还可以是一个包含多个类名的数组，这在类是由 JavaScript 生成的情况下非常方便。
 
 ```pug-preview
 - var classes = ['foo', 'bar', 'baz']
@@ -160,7 +160,7 @@ a(class=classes)
 a.bang(class=classes class=['bing'])
 ```
 
-它还可以是一个将类名映射为 true (真) 或 false (假) 值的对象，这在使用条件性类 (conditional classes) 的时候非常有用
+它还可以是一个将类名映射为 `true` 或 `false` 的对象，这在使用条件性类（conditional classes）的时候非常有用。
 
 ```pug-preview
 - var currentUrl = '/about'

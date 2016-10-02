@@ -21,7 +21,7 @@ case friends
 
 ## 分支传递 (Case Fall Through) ~~ Case Fall Through
 
-您可以像 JavaScript 中的 `switch` 语句那样使用传递 (Fall Through)。
+您可以像 JavaScript 中的 `switch` 语句那样使用传递（fall through）。
 
 ```pug-preview
 - var friends = 0
