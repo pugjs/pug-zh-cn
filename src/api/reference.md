@@ -23,7 +23,7 @@ pug.render('p Hello world!');
 ```parameter-list
 filename
 ~ string
-~ 要编译的代码的文件名。用于异常信息以及（使用相对路径的）包含（include）和扩展（extend）操作。默认值是 `'Pug'`。
+~ 要编译的代码的文件名。用于异常信息以及（使用相对路径的）包含（`include`）和扩展（`extends`）操作。默认值是 `'Pug'`。
 basedir
 ~ string
 ~ 模板里所有绝对定位的根目录。
