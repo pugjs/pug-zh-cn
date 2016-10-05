@@ -32,7 +32,7 @@ footer#footer
 
 被包含的文件的路径，如果是一个绝对路径（如 `include /root.pug`），那么前面会加上 `options.basedir` 选项属性来进行解析。否则，路径应该相对于正在被编译的当前文件。
 
-在 Pug v1 里，如果没有给出文件扩展名，会自动加上 `.pug`。但在 Pug v2 这个行为已经被移除。
+在 Pug v1 里，如果没有给出文件扩展名，会自动加上 `.pug`。但是这个特性在 Pug v2 中*这是不赞成使用的*。
 
 ## 包含纯文本 ~~ Including Plain Text
 
