@@ -21,7 +21,7 @@ Pug 也支持把它们写成一个块的形式：
 
 ```pug-preview
 -
-  list = ["Uno", "Dos", "Tres",
+  var list = ["Uno", "Dos", "Tres",
           "Cuatro", "Cinco", "Seis"]
 each item in list
   li= item
