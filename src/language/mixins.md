@@ -77,6 +77,10 @@ mixin link(href, name)
 +link('/foo', 'foo')(class="btn")
 ```
 
+::: float info 提示
+`+link(class="btn")` 这种写法也是允许的，且等价于 `+link()(class="btn")`，因为 Pug 会判断括号内的内容是属性还是参数。但我们鼓励您使用后者的写法，明确地传递空的参数，确保第一对括号内始终都是参数列表。
+:::
+
 ## 剩余参数 ~~ Rest Arguments
 
 您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
