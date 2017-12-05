@@ -8,11 +8,15 @@ id: language/attributes
 
 标签属性和 HTML 语法非常相似，但它们的值就是普通的 JavaScript 表达式。您可以用逗号作为属性分隔符，不过不加逗号也是允许的。
 
+（注意：本页的示例中，包含管道符号 `|` 的行是用于[控制空格][whitespace control]的。）
+
 ```pug-preview
 a(href='baidu.com') 百度
-= '\n'
+|
+|
 a(class='button' href='baidu.com') 百度
-= '\n'
+|
+|
 a(class='button', href='baidu.com') 百度
 ```
 
@@ -81,9 +85,8 @@ a(href="/#{url}") Link
    ```pug-preview
    - var url = 'pug-test.html';
    a(href='/' + url) 链接
-
-   = '\n'
-
+   |
+   |
    - url = 'https://example.com/'
    a(href=url) 另一个链接
    ```
@@ -94,7 +97,8 @@ a(href="/#{url}") Link
    - var btnType = 'info'
    - var btnSize = 'lg'
    button(type='button' class='btn btn-' + btnType + ' btn-' + btnSize)
-   = '\n'
+   |
+   |
    button(type='button' class=`btn btn-${btnType} btn-${btnSize}`)
    ```
 
@@ -117,11 +121,14 @@ div(unescaped!="<code>")
 
 ```pug-preview
 input(type='checkbox' checked)
-= '\n'
+|
+|
 input(type='checkbox' checked=true)
-= '\n'
+|
+|
 input(type='checkbox' checked=false)
-= '\n'
+|
+|
 input(type='checkbox' checked=true.toString())
 ```
 
@@ -129,13 +136,17 @@ input(type='checkbox' checked=true.toString())
 
 ```pug-preview
 doctype html
-= '\n'
+|
+|
 input(type='checkbox' checked)
-= '\n'
+|
+|
 input(type='checkbox' checked=true)
-= '\n'
+|
+|
 input(type='checkbox' checked=false)
-= '\n'
+|
+|
 input(type='checkbox' checked=true && 'checked')
 ```
 
@@ -155,7 +166,8 @@ a(style={color: 'red', background: 'green'})
 ```pug-preview
 - var classes = ['foo', 'bar', 'baz']
 a(class=classes)
-= '\n'
+|
+|
 //- the class attribute may also be repeated to merge arrays
 a.bang(class=classes class=['bing'])
 ```
@@ -165,7 +177,8 @@ a.bang(class=classes class=['bing'])
 ```pug-preview
 - var currentUrl = '/about'
 a(class={active: currentUrl === '/'} href='/') Home
-= '\n'
+|
+|
 a(class={active: currentUrl === '/about'} href='/about') About
 ```
 
@@ -205,7 +218,7 @@ a#main-link
 div#foo(data-bar="foo")&attributes({'data-foo': 'bar'})
 ```
 
-这个对象不一定必须是一个字面值，它同样也可以是一个包含值的对象（参见 [Mixin 属性][Mixin Attributes]）。
+这个对象不一定必须是一个字面值，它同样也可以是一个包含值的对象（参见 [Mixin 属性][mixin attributes]）。
 
 ```pug-preview
 - var attributes = {};
@@ -221,3 +234,4 @@ div#foo(data-bar="foo")&attributes(attributes)
 [mixin attributes]: mixins.html#mixin-attributes
 [cross-site scripting]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [migration guide]: ../api/migration-v2.html
+[whitespace control]: plain-text.html#whitespace-control

@@ -37,3 +37,9 @@ a: img
 foo/
 foo(bar='baz')/
 ```
+
+## 输出空格 ~~ Rendered Whitespace
+
+标签前后的空格都会被移除，因此您要控制这些标签是否需要处理。空格的控制在[纯文本][plain text]中会详细介绍。
+
+[plain text]: plain-text.html#whitespace-control

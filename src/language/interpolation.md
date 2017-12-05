@@ -74,9 +74,12 @@ p Interpolation works with #{'#{interpolation}'} too!
 p.
   这是一个很长很长而且还很无聊的段落，还没有结束，是的，非常非常地长。
   突然出现了一个 #[strong 充满力量感的单词]，这确实让人难以 #[em 忽视]。
+p.
+  使用带属性的嵌入标签的例子：
+  #[q(lang="es") ¡Hola Mundo!]
 ```
 
-您确实可以用行内的 HTML 代码做同样的事情。但问题是，怎么用 Pug 来做这件事情呢？将 Pug 的标签语句用 `#[` 和 `]` 括起来就可以了。它会被求值并嵌入到它原来位置的内容中。
+您确实可以在 Pug 中嵌入一行原始 HTML 代码来做同样的事情。但问题是，如何只用 Pug 来做这件事情？将 Pug 的标签语句用 `#[` 和 `]` 括起来就可以了。它会被求值并嵌入到它原来位置的内容中。
 
 ### 空格的调整 ~~ Whitespace Control
 
@@ -92,3 +95,7 @@ p
 p.
   如果用了嵌入，在 #[strong strong] 和 #[em em] 旁的空格就会让我舒服多了。
 ```
+
+阅读文档“纯文本”页中关于[空格控制][whitespace control]的章节更深入地探讨本话题。
+
+[whitespace control]: plain-text.html#whitespace-control
